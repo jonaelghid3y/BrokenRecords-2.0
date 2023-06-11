@@ -20,11 +20,10 @@ const Header = () => {
 }
 
 const StyledHeaderdiv = styled.div`
-height: 150px;
+height: 80px;
 display: flex;
 align-items: center;
 justify-content: center;
-gap: 50px;
 background-color: black;
 `;
 

@@ -55,38 +55,37 @@ const Nav = () => {
 
   return (
     <StyledNav>
+      
+      <Stylednavbar>
+        
+        <Link> <Stylednavbarlänk> Products </Stylednavbarlänk></Link> {/* OLD no need className="navbarlänk" */}
+        <Stylednavbarlänk>Giftcards </Stylednavbarlänk>
+        <Stylednavbarlänk>About </Stylednavbarlänk>
+      </Stylednavbar>
+      
       <Styledloggadiv>
+      <StyledNamediv><h1> RERCORDS</h1></StyledNamediv>
         <Link to="/" style={{ color: "white" }}>
           <Styledlogdiv1>
-            <h1 >BR</h1>
             <motion.img
               style={{
                 backgroundcolor: "rgb(241, 198, 6)",
                 borderradius: "50%",
-                width: "50px",
-                height: "50px"
+                width: "40px",
+                height: "40px"
               }}
-              whileHover={{ rotate: 720, transition: { duration: 3 } }}
+              
+              whileHover={{ rotate: 840, transition: { duration: 1.5,repeat: Infinity} }}
               id="loggabild" src="https://cdn4.iconfinder.com/data/icons/music-209/32/Music_dj_turntable_vinyl_disc-256.png"></motion.img>
-            <h1>KEN</h1> <br />
           </Styledlogdiv1>
-          <h1>RECORDS</h1>
 
         </Link>
-
+      
+      <StyledNamediv><h1>BROKEN </h1> </StyledNamediv>
       </Styledloggadiv>
-      <Stylednavbar>
-        <Link className="navbarlänk"
-          to="/"
-        >
-          Products
-        </Link>
+      
 
-        <Stylednavbarlänk>Giftcards </Stylednavbarlänk>
-        <Stylednavbarlänk>About </Stylednavbarlänk>
-      </Stylednavbar>
-
-      <Styledicondiv>
+  
         <Styledcartbutton style={{ marginRight: "10px", color: "white" }}>
           <div
             onMouseEnter={handleCartHover}
@@ -94,7 +93,7 @@ const Nav = () => {
             style={{ position: "relative" }}
           >
             <Link to="/Checkout" style={{ color: "white" }}>
-              <BsCart4 size={30} className="icons" />
+              <BsCart4 size={25} className="icons" />
             </Link>
             {isCartOpen && (
               <div
@@ -135,8 +134,7 @@ const Nav = () => {
                               {Product.quantity}
                               <motion.button
                                 whileTap={{ scale: 0.9 }}
-                                onClick={() => handleAddProduct(Product._id)}
-                              >
+                                onClick={() => handleAddProduct(Product._id)}>
                                 <AiFillPlusCircle style={{ marginLeft: "5px" }} />
                               </motion.button>
                             </td>
@@ -167,77 +165,66 @@ const Nav = () => {
               </div>
             )}
           </div>
-
           <Styledcartcount style={{ marginRight: "10px" }}>
             {cartLength}
           </Styledcartcount>
+          <Link
+            className="icons"
+            style={{ color: "white" }}
+            to="/admin/Manageproducts">
+            <RiUserSettingsLine size={25} />
+          </Link>
         </Styledcartbutton>
-
-        <Link
-          className="icons"
-          style={{ color: "white" }}
-          to="/admin/Manageproducts"
-        >
-          <RiUserSettingsLine size={30} />
-        </Link>
-      </Styledicondiv>
     </StyledNav>
   );
 };
 const StyledNav = styled.nav`
 display: flex;
-align-items: end;
-gap: 16%;
+align-items: center;
+justify-content: space-between;
 width: 100%;
 color: white;
+padding: 40px;
 `;
-const Styledicondiv = styled.div`
-display: flex;
-align-items: center;
-flex-direction: row;
-position: absolute;
-right: 150px;
-color: white
-`;
+
 const Styledloggadiv = styled.div`
 display: flex;
 justify-content: center;
 align-items: center;
-flex-direction: column;
-width: 250px;
-height: 100px;
-margin-left: 100px;
-font-size: 40px;
-font-family: "Bebas Neue";
-
 `;
+const StyledNamediv = styled.div `
+  dispaly: flex;
+  align-items: center;
+  font-family: 'Lexend', sans-serif;
+  font-size: 15px;
+  margin-left: 5px;
+  margin-right: 5px;
+`;
+
 const Styledlogdiv1 = styled.div`
 display: flex;
 flex-direction: row;
 align-items: center;
-
-
 `;
-const Stylednavbar = styled.div`
 
+const Stylednavbar = styled.div`
 display: flex;
-flex-direction: row;
+  flex-direction: row;
 gap: 20px;
-text-decoration: none;
-font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-color: white;
-font-size: 20px;
-font-weight: bold;
+font-family: 'Lexend', sans-serif;
+  text-decoration: none;
+  color: white;
+  font-size: 15px;
+  font-weight: semi-bold;
+margin-right: -110px;
 transition: 1s;
 `;
 
 const Stylednavbarlänk = styled.p`
-
 text-decoration: none;
-font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+font-family: 'Lexend', sans-serif;
 color: white;
-font-size: 25px;
-font-weight: bold;
+font-size: 20px;
 
 &:hover{
   scale: 1.1;
@@ -245,12 +232,13 @@ font-weight: bold;
 
 }
 `;
+
 const Styledcartbutton = styled.div`
 display: flex;
 align-items: center;
 `;
-const Styledcartcount = styled.span`
 
+const Styledcartcount = styled.span`
 display: flex;
 align-items: center;
 justify-content: center;
@@ -261,7 +249,6 @@ height: 20px;
 font-weight: bolder;
 background-color: rgb(241, 198, 6);
 color: rgb(14, 13, 13);
-
 `;
 
 

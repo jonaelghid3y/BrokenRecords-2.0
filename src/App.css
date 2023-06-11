@@ -145,137 +145,72 @@ overflow: hidden;
   height: 40px;
   color:rgb(241, 198, 6);
   background-color: black;
+  margin-bottom: 20px;
   
 }
-
-
-
-
-/* SLIDESHOW PRODUCTS */
-.hotText {
-  color: white;
-  text-shadow: 1px 1px 6px black, 1px 1px 15px rgb(241, 198, 6);
-  margin-top: 50px;
-  margin-bottom: 50px;
-  font-size: 50px;
-  font-family: "Bebas Neue";
-}
-
-.slideshowNav {
-  position: absolute;
-  top: 47%;
-  transform: translateY(-90%);
-  z-index: 1;
+.reklambanner{
+  border: 1px solid black;
   width: 100%;
-  max-width: 110%;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color:rgb(241, 198, 6);;
+}
+#Presentkort{
+
+  background-image: url(../imgs/Dissolve_D985_58_649_master1.png);
+ filter: brightness(90%);
+ background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 650px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: flex-end;
 }
 
-.slideshowNav .ssbtn {
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
-  outline: none;
-  padding: 0;
-  margin: 0;
-  width: 40px;
-  height: 40px;
-  align-self: center;
-}
-
-.ssbtn {
+#presentkortinnehåll{
   color: white;
-  padding: 10px;
-  background-color: #333;
-  color: #fff;
-}
 
-.ssbtn:hover:before {
-  opacity: 0.9;
-}
-
-.ssbtn:before {
-  content: '';
-  position: absolute;
-  top: -100px;
-  bottom: -100px;
-  left: -20px;
-  right: -20px;
-  background-color: rgba(0, 0, 0, 0.5);
-  opacity: 0.6;
-  z-index: -1;
-  transition: opacity 0.3s ease-in-out;
-}
-
-.ssbtn:hover {
-  color: rgb(241, 198, 6);
-}
-
-.slideshowNav .prev {
-  position: absolute;
-  left: 0;
-}
-
-.slideshowNav .next {
-  position: absolute;
-  right: 0;
-}
-
-.slideshowUL {
   display: flex;
-  flex-direction: row;
-  /* max-width: 40%; */
-  margin: 0 auto;
-}
-
-.iconContainerSS {
-  padding-left: 10%;
-  display: flex;
+  text-align: center;
+  justify-content: center;
   align-items: center;
+  flex-direction: column;
+  margin-bottom: 100px;
+  margin-right: 200px;
+  row-gap: 25px;
+
 }
 
-.reviewText {
-  align-self: center;
-  /* margin-left: 5px; */
-  display: inline-block;
-  max-width: 20%;
-  color: rgb(241, 198, 6);
-  text-shadow: 1px 1px 2px black;
+#presentkortkort{
+  background-image: url(../imgs/kort.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+ border: solid 1px black;
+ background-color: grey;
+ border-radius: 10px;
+ width: 400px;
+ height: 250px;
+ box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+
+}
+#presentkortdiv{
+  border: 1px solid black;
+ 
+  width: 100%;
+  height: 1200px;
 }
 
-#slideshowDIV {
-  max-width: 45%;
-  overflow: hidden;
-  max-height: 500px;
-  position: relative;
-}
 
-.slideShowItem {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
 
-.slideShowImage {
-  max-height: 350px;
-  object-fit: cover;
-  margin-left: 80px;
-  box-shadow: -5px 5px 5px rgba(0, 0, 0, 0.3);
-}
 
-.productListItemSS {
-  min-width: 100vw;
-  max-width: 100vw;
-  height: 360px;
-  display: flex;
-  flex-direction: row;
-}
-.productListItemSS2 {
-  min-width: 100vw;
-  max-width: 100vw;
-  height: 360px;
-  display: flex;
-  flex-direction: row;
-}
+
+
 
 /* NEW RELEASE SLIDE THING */
 

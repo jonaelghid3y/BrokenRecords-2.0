@@ -82,7 +82,7 @@ const Nav = () => {
 
         </Link>
       
-        <StyledNamediv><h1> RERCORDS</h1></StyledNamediv>
+        <StyledNamediv><h1> RECORDS</h1></StyledNamediv>
       </Styledloggadiv>
       
 

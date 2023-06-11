@@ -64,7 +64,8 @@ const Nav = () => {
       </Stylednavbar>
       
       <Styledloggadiv>
-      <StyledNamediv><h1> RERCORDS</h1></StyledNamediv>
+      <StyledNamediv><h1>BROKEN </h1> </StyledNamediv>
+      
         <Link to="/" style={{ color: "white" }}>
           <Styledlogdiv1>
             <motion.img
@@ -81,7 +82,7 @@ const Nav = () => {
 
         </Link>
       
-      <StyledNamediv><h1>BROKEN </h1> </StyledNamediv>
+        <StyledNamediv><h1> RERCORDS</h1></StyledNamediv>
       </Styledloggadiv>
       
 

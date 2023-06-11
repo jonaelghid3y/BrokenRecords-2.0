@@ -1,5 +1,7 @@
-# Creators
+# Creators 
 <h2>Uppdelning: </h2> 
-Jonael: Raouter 
+Jonael
 <br/>
-Daniel: Product item
+Daniel
+
+# JG x DNK

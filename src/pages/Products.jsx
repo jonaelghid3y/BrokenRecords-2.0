@@ -70,6 +70,26 @@ const Products = () => {
           Pop
         </button>
       </div>
+      <section className='landing-page'> 
+      <div className='landing-container'>
+        <div className='in-pic-container'> 
+          <div className='text-container'>
+            <div className='store-name-conatiner'>
+              <h1>BR<span className='highlighted-letter'>O</span>KEN RECORDS</h1>
+            </div>
+            <p>"Rewind, Play, Repeat: Soundtrack Your Life with Vinyl!"</p>
+          </div>
+          <div className='btn-container'>
+            <div>
+              <button className='join-btn'>Join us</button>
+            </div>
+            <div>
+              <button className='login-btn custom-login-btn'>Login</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      </section>
 
       <StyledProductsdiv>
         <ul className="productUL">

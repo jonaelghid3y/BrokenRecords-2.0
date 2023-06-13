@@ -85,26 +85,6 @@ const Products = () => {
       </div>
 
       <StyledProductsdiv>
-      <div id="filterbar">
-        <input type="text" placeholder="Search" />
-        <button className="sökknappar">Sök</button>
-        <h5>Filter:</h5>
-        <button className="sökknappar" onClick={() => handleFilterClick(null)}>
-          Allt
-        </button>
-        <button className="sökknappar" onClick={() => handleFilterClick('Rock')}>
-          Rock
-        </button>
-        <button className="sökknappar" onClick={() => handleFilterClick('Jazz')}>
-          Jazz
-        </button>
-        <button className="sökknappar" onClick={() => handleFilterClick('Hiphop')}>
-          Hiphop
-        </button>
-        <button className="sökknappar" onClick={() => handleFilterClick('Pop')}>
-          Pop
-        </button>
-      </div>
         <ul className="productUL">
           {productList.slice(0, visibleProducts).map((product) => (
             <div className="productcard" key={product._id}>

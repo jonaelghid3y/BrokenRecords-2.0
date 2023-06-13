@@ -342,12 +342,12 @@ box-shadow: inset 7px 7px 12px #d4ad02,
 #Presentkort{
 
   background-image: url(../imgs/Dissolve_D985_58_649_master1.png);
- filter: brightness(90%);
+ filter: brightness(70%);
  background-repeat: no-repeat;
   background-size: cover;
-  background-position: center;
+  background-position: top;
   width: 100%;
-  height: 650px;
+  height: 500px;
   display: flex;
   flex-direction: column;
   align-items: flex-end;
@@ -394,31 +394,7 @@ box-shadow: inset 7px 7px 12px #d4ad02,
 
 
 
-/* NEW RELEASE SLIDE THING */
 
-
-#newReleaseSlide{
-  display: flex;
-  flex-direction: row;
-  width: 80%;
-  overflow-x: scroll;
-}
-
-.newReleaseItem{
-  min-width: 19vw;
-  max-width: 21vw;
-  flex: 0 0 25%;
-  justify-self: center;
-}
-
-::-webkit-scrollbar {
-  width: 12px;
-  height: 20px;
-}
-
-::-webkit-scrollbar-thumb {
-  background-color: #252525;
-}
 
 ::-webkit-scrollbar-thumb:hover {
   background-color: rgb(241, 198, 6);

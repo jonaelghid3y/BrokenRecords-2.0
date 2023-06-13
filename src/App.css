@@ -76,12 +76,12 @@ height: 50px;
   align-items: flex-start;
   flex-wrap: wrap;
   list-style-type: none;
-  gap: 40px;
+  gap: 60px;
   
 }
 .productcard{
   padding-bottom: 10px;
-  border: 0.5px solid rgb(130, 130, 130);
+ 
   border-radius: 20px;
   
   min-height: 360px;
@@ -93,7 +93,7 @@ height: 50px;
 }
 
 .productListItem {
-  border: 0.5px solid rgb(130, 130, 130);
+ 
   width: 260px;
   height: 260px;
  
@@ -119,6 +119,7 @@ overflow: hidden;
 .albumInfo {
   font-size: 12px;
   color: rgb(12, 12, 12);
+  
 
   
 }
@@ -160,12 +161,12 @@ overflow: hidden;
 #Presentkort{
 
   background-image: url(../imgs/Dissolve_D985_58_649_master1.png);
- filter: brightness(90%);
+ filter: brightness(70%);
  background-repeat: no-repeat;
   background-size: cover;
-  background-position: center;
+  background-position: top;
   width: 100%;
-  height: 650px;
+  height: 500px;
   display: flex;
   flex-direction: column;
   align-items: flex-end;
@@ -212,31 +213,7 @@ overflow: hidden;
 
 
 
-/* NEW RELEASE SLIDE THING */
 
-
-#newReleaseSlide{
-  display: flex;
-  flex-direction: row;
-  width: 80%;
-  overflow-x: scroll;
-}
-
-.newReleaseItem{
-  min-width: 19vw;
-  max-width: 21vw;
-  flex: 0 0 25%;
-  justify-self: center;
-}
-
-::-webkit-scrollbar {
-  width: 12px;
-  height: 20px;
-}
-
-::-webkit-scrollbar-thumb {
-  background-color: #252525;
-}
 
 ::-webkit-scrollbar-thumb:hover {
   background-color: rgb(241, 198, 6);

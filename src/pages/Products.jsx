@@ -50,26 +50,7 @@ const Products = () => {
 
   return (
     <div id="productsdiv">
-      <div id="filterbar">
-        <input type="text" placeholder="Search" />
-        <button className="sökknappar">Sök</button>
-        <h5>Filter:</h5>
-        <button className="sökknappar" onClick={() => handleFilterClick(null)}>
-          Allt
-        </button>
-        <button className="sökknappar" onClick={() => handleFilterClick('Rock')}>
-          Rock
-        </button>
-        <button className="sökknappar" onClick={() => handleFilterClick('Jazz')}>
-          Jazz
-        </button>
-        <button className="sökknappar" onClick={() => handleFilterClick('Hiphop')}>
-          Hiphop
-        </button>
-        <button className="sökknappar" onClick={() => handleFilterClick('Pop')}>
-          Pop
-        </button>
-      </div>
+      
       <section className='landing-page'> 
       <div className='landing-container'>
         <div className='in-pic-container'> 
@@ -92,6 +73,26 @@ const Products = () => {
       </section>
 
       <StyledProductsdiv>
+      <div id="filterbar">
+        <input type="text" placeholder="Search" />
+        <button className="sökknappar">Sök</button>
+        <h5>Filter:</h5>
+        <button className="sökknappar" onClick={() => handleFilterClick(null)}>
+          Allt
+        </button>
+        <button className="sökknappar" onClick={() => handleFilterClick('Rock')}>
+          Rock
+        </button>
+        <button className="sökknappar" onClick={() => handleFilterClick('Jazz')}>
+          Jazz
+        </button>
+        <button className="sökknappar" onClick={() => handleFilterClick('Hiphop')}>
+          Hiphop
+        </button>
+        <button className="sökknappar" onClick={() => handleFilterClick('Pop')}>
+          Pop
+        </button>
+      </div>
         <ul className="productUL">
           {productList.slice(0, visibleProducts).map((product) => (
             <div className="productcard" key={product._id}>
@@ -150,7 +151,8 @@ const Products = () => {
 
 const StyledProductsdiv = styled.div`
   margin: 10px;
-  border: 4px solid black;
+
+  width: 100%;
   min-height: 535px;
   display: flex;
   flex-direction: column;

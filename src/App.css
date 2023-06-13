@@ -17,7 +17,7 @@ a {
 #root {
   display: flex;
   flex-direction: column;
-  min-height: 100dvh;
+  min-height: 100vh;
   width: 100%;
 }
 
@@ -45,6 +45,167 @@ height: 50px;
   scale: 1.1;
   color:rgb(241, 198, 6);
 }
+
+/*LANIDNG PAGE*/
+.landing-container {
+  height: 80vh;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+.landing-page{
+  height: 80vh;
+  width: 100%;
+  background-image: url(./imgs/chase-fade-XOLIrILp-vI-unsplash.jpg);
+  background-size: cover;
+}
+
+.in-pic-container{
+  display: flex;
+    flex-direction: column;
+  height: 150px;
+  width: 500px;
+  justify-content: center;
+  align-items: center;
+  margin-top: 35vh;
+  color: white;
+}
+
+.store-name-conatiner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 20px;
+}
+.highlighted-letter {
+  color: rgb(236, 194, 6);
+}
+
+.btn-container {
+  display: flex;
+  width: 400px;
+  height: 55px;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.btn-container button {
+  background-color:#f9cc02;
+  border: none;
+  padding: 0.5rem;
+  font-size: 15px;
+  width: 12em;
+  border-radius: 16px;
+  color: black;
+  box-shadow: 0 0.2rem #797916;
+  cursor: pointer;
+}
+
+.btn-container .custom-login-btn {
+  background-color: rgba(255, 255, 255, 0.212);
+  box-shadow: 0 0.2rem #0303016e;
+}
+
+.btn-container button:active {
+  color: white;
+  box-shadow: 0 0.2rem #797916;
+  transform: translateY(0.3rem);
+}
+
+.btn-container button:hover:not(:disabled) {
+  background-color: rgb(236, 194, 6);
+  color: white;
+  text-shadow: 0 0.1rem #bcb4b4;
+}
+
+.btn-container button:disabled {
+  cursor: auto;
+  color: grey;
+}
+
+
+/*FILTER NAV*/
+#filterbar{
+   display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 999;
+  box-shadow: 0 2px 24px 0 rgb(241, 198, 6);
+  background-color: rgb(249, 204, 2) !important;
+  animation: 500ms ease-in-out 0s normal none 1 running fadeInDown;
+  padding-top: 0px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.search {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+  }
+  .search-bar {
+    font-family: inherit;
+    font-size: inherit;
+    background-color: #f4f2f2;
+    border: none;
+    color: #646464;
+    padding: 0.7rem 1rem;
+    border-radius: 10px;
+    width: 250px;
+    transition: all ease-in-out .5s;
+    margin-right: -2rem;
+  }
+  
+  .search-bar:hover, .search-bar:focus {
+    box-shadow: 0 0 1em #00000013;
+  }
+  
+  .search-bar:focus {
+    outline: none;
+    background-color: #f0eeee;
+  }
+  
+  .search-bar::-webkit-input-placeholder {
+    font-weight: 100;
+    color: #ccc;
+  }
+  
+  .search-bar:focus + .svg-searchicon {
+    background-color: #f0eeee;
+  }
+  
+  .svg-searchicon {
+    border: none;
+    background-color: #f4f2f2;
+    margin-top: .1em;
+  }
+  
+  .svg-searchicon:hover {
+    cursor: pointer;
+  }
+  
+.sökknappar{
+  font-weight:600;
+  margin: 10px;
+  padding: 10px;
+  min-width: 150px;
+  border-radius: 20px;
+  background: #f9cc02;
+  box-shadow:  7px 7px 12px #d4ad02,
+             -7px -7px 12px #ffeb02;
+  transition: all 0.5s;
+}
+.sökknappar:active{
+  background: #f9cc02;
+box-shadow: inset 7px 7px 12px #d4ad02,
+            inset -7px -7px 12px #ffeb02;
+}
+
+
 /* PRODUCT LIST CARDS */
 #productsdiv{
   display: flex;
@@ -53,20 +214,6 @@ height: 50px;
   justify-content: center;
 }
 
-#filterbar{
-  border: 1px solid black;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.sökknappar{
-
-  border: 1px solid black;
-  margin-right: 20px;
-  width: 60px;
-  border-radius: 10px;
-}
 
 /*PRODDUCTS*/
 .productUL {
@@ -136,7 +283,7 @@ height: 50px;
 .cartBtn{
   font-weight: 600;
   color: white;
-  background-color:rgb(207, 176, 2);
+  background-color:rgb(249, 204, 2);
   margin: 20px;
   padding: 10px;
   min-width: 150px;
@@ -174,7 +321,7 @@ height: 50px;
               -6px -6px 12px #ffffff;
  }
  
- button:active {
+ .seemorebutton:active {
   color: #666;
   box-shadow: inset 4px 4px 12px #c5c5c5,
               inset -4px -4px 12px #ffffff;
@@ -491,80 +638,3 @@ min-height: 1000px;
 }
 
 
-/*LANIDNG PAGE*/
-.landing-container {
-  height: 80vh;
-  width: 100%;
-  display: flex;
-  justify-content: flex-end;
-}
-.landing-page{
-  height: 80vh;
-  width: 100%;
-  background-image: url(./imgs/chase-fade-XOLIrILp-vI-unsplash.jpg);
-  background-size: cover;
-}
-
-.in-pic-container{
-  display: flex;
-    flex-direction: column;
-  height: 150px;
-  width: 500px;
-  justify-content: center;
-  align-items: center;
-  margin-top: 35vh;
-  color: white;
-}
-
-.store-name-conatiner {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: white;
-  font-size: 20px;
-}
-.highlighted-letter {
-  color: rgb(236, 194, 6);
-}
-
-.btn-container {
-  display: flex;
-  width: 400px;
-  height: 55px;
-  justify-content: space-evenly;
-  align-items: center;
-}
-
-.btn-container button {
-  background-color: rgb(207, 176, 2);
-  border: none;
-  padding: 0.5rem;
-  font-size: 15px;
-  width: 12em;
-  border-radius: 16px;
-  color: white;
-  box-shadow: 0 0.2rem #797916;
-  cursor: pointer;
-}
-
-.btn-container .custom-login-btn {
-  background-color: rgba(255, 255, 255, 0.212);
-  box-shadow: 0 0.2rem #0303016e;
-}
-
-.btn-container button:active {
-  color: white;
-  box-shadow: 0 0.2rem #797916;
-  transform: translateY(0.3rem);
-}
-
-.btn-container button:hover:not(:disabled) {
-  background-color: rgb(236, 194, 6);
-  color: white;
-  text-shadow: 0 0.1rem #bcb4b4;
-}
-
-.btn-container button:disabled {
-  cursor: auto;
-  color: grey;
-}

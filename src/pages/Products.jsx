@@ -49,9 +49,9 @@ const Products = () => {
   }, [selectedCategory]);
 
   return (
+    
     <div id="productsdiv">
-      
-      <section className='landing-page'> 
+            <section className='landing-page'> 
       <div className='landing-container'>
         <div className='in-pic-container'> 
           <div className='text-container'>
@@ -62,15 +62,36 @@ const Products = () => {
           </div>
           <div className='btn-container'>
             <div>
-              <button className='join-btn'>Join us</button>
+              <button className='join-btn'>Subscribe to news letter</button>
             </div>
-            <div>
+            {/* <div>
               <button className='login-btn custom-login-btn'>Login</button>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>
       </section>
+
+      <div id="filterbar">
+        <input type="text" placeholder="Search" />
+        <button className="sökknappar">Sök</button>
+        <h5>Filter:</h5>
+        <button className="sökknappar" onClick={() => handleFilterClick(null)}>
+          Allt
+        </button>
+        <button className="sökknappar" onClick={() => handleFilterClick('Rock')}>
+          Rock
+        </button>
+        <button className="sökknappar" onClick={() => handleFilterClick('Jazz')}>
+          Jazz
+        </button>
+        <button className="sökknappar" onClick={() => handleFilterClick('Hiphop')}>
+          Hiphop
+        </button>
+        <button className="sökknappar" onClick={() => handleFilterClick('Pop')}>
+          Pop
+        </button>
+      </div>
 
       <StyledProductsdiv>
       <div id="filterbar">
@@ -107,9 +128,9 @@ const Products = () => {
                 <h4 className="albumInfo">Release year: {product.releaseyear}</h4>
                 <p className="priceTag">{product.price}:-</p>
               </div>
-              <Button onClick={() => handleAddToCart(product._id)} className="cartBtn">
+              <button onClick={() => handleAddToCart(product._id)} className="cartBtn">
                 Add to cart
-              </Button>
+              </button>
             </div>
           ))}
         </ul>
@@ -150,8 +171,7 @@ const Products = () => {
 };
 
 const StyledProductsdiv = styled.div`
-  margin: 10px;
-
+  padding: 20px;
   width: 100%;
   min-height: 535px;
   display: flex;
@@ -161,23 +181,5 @@ const StyledProductsdiv = styled.div`
   align-items: center;
 `;
 
-const Button = styled.button`
-  color: rgb(241, 198, 6);
-  border: 2px solid white;
-  background: black;
-  border-radius: 5px;
-  height: 40px;
-  width: 50%;
-
-  &:hover {
-    background: rgb(241, 198, 6);
-    color: black;
-    border: 2px solid rgb(241, 198, 6);
-  }
-
-  &:active {
-    transform: scale(0.9);
-  }
-`;
 
 export default Products;

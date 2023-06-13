@@ -52,6 +52,7 @@ height: 50px;
   align-items: center;
   justify-content: center;
 }
+
 #filterbar{
   border: 1px solid black;
   width: 100%;
@@ -66,10 +67,11 @@ height: 50px;
   width: 60px;
   border-radius: 10px;
 }
+
+/*PRODDUCTS*/
 .productUL {
-  margin-top: 70px;
-  margin-bottom: 70px;
-  width: 80vw;
+  margin: 20px 50px;
+  width: 100vw;
   min-height: 10vw;
   display: flex;
   justify-content: center;
@@ -77,77 +79,108 @@ height: 50px;
   flex-wrap: wrap;
   list-style-type: none;
   gap: 40px;
-  
 }
+
 .productcard{
-  padding-bottom: 10px;
-  border: 0.5px solid rgb(130, 130, 130);
-  border-radius: 20px;
-  
+  background-color: rgba(96, 188, 231, 0.266) ;  
   min-height: 360px;
-  width: 260px;
+  width: 300px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
+  border-radius: 20px;
+  box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 1px, rgba(250, 255, 113, 0.07) 0px 2px 2px, rgba(0, 0, 0, 0.07) 0px 4px 4px, rgba(0, 0, 0, 0.07) 0px 8px 8px, rgba(0, 0, 0, 0.07) 0px 16px 16px;
+  overflow: hidden;
 }
 
-.productListItem {
-  border: 0.5px solid rgb(130, 130, 130);
-  width: 260px;
-  height: 260px;
- 
+.productListItem { /*prduct picture*/
+  width: 300px;
+  height: 300px;
   background-size: contain;
- 
-  background-clip: content-box;
-  overflow: hidden;
-
   display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  flex-direction: column;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
  
 }.productsinfotext{
+  margin-top: 20px;
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
-justify-content: center;
-background-clip: content-box;
-overflow: hidden;
+  justify-content: center;
 }
+.albumTitle {
+  text-align: center;
+  margin-bottom: 5px;
+  padding: 5px;
+  color: rgb(7, 7, 7);
+  font-size: 20px;
+  text-overflow: clip;  
+  overflow: hidden;
+}
+
 .albumInfo {
   font-size: 12px;
   color: rgb(12, 12, 12);
-
-  
-}
-
-.albumTitle {
-  color: rgb(7, 7, 7);
-  font-size: 15px;
-  text-overflow: ellipsis;
-  overflow: hidden;
-  white-space: nowrap;
-  
 }
 
 .priceTag {
+  margin-top: 20px ;
+  font-weight: 600;
   font-size: 16px;
   color: rgb(0, 0, 0);
-
-
   margin-bottom: 10px;
 }
-.seemorebutton{
-  border: 1px solid black;
-  width: 120px;
-  height: 40px;
-  color:rgb(241, 198, 6);
-  background-color: black;
-  margin-bottom: 20px;
-  
+
+.cartBtn{
+  font-weight: 600;
+  color: white;
+  background-color:rgb(207, 176, 2);
+  margin: 20px;
+  padding: 10px;
+  min-width: 150px;
+  border-radius: 20px;
+  transition: all 0.5s;
+  -webkit-transition: all 0.5s;
 }
+
+.cartBtn:hover {
+  background-color: rgb(255, 231, 95);
+  color: black;
+  box-shadow: 0 0 20px #6fc5ff50;
+  transform: scale(1.1);
+}
+
+.cartBtn:active {
+  background-color: rgb(207, 176, 2);
+  transition: all 0.25s;
+  -webkit-transition: all 0.25s;
+  box-shadow: none;
+  transform: scale(0.98);
+}
+
+.seemorebutton {
+  margin: 20px;
+  color: #181818;
+  width: 200px;
+  padding: 15px;
+  font-size: 18px;
+  border-radius: 0.5em;
+  background: #e8e8e8;
+  border: 1px solid #e8e8e8;
+  transition: all .3s;
+  box-shadow: 6px 6px 12px #c5c5c5,
+              -6px -6px 12px #ffffff;
+ }
+ 
+ button:active {
+  color: #666;
+  box-shadow: inset 4px 4px 12px #c5c5c5,
+              inset -4px -4px 12px #ffffff;
+ }
+
+/*ADD BANNER*/
 .reklambanner{
   border: 1px solid black;
   width: 100%;
@@ -157,6 +190,8 @@ overflow: hidden;
   justify-content: center;
   color:rgb(241, 198, 6);;
 }
+
+/*GIFT CARD*/
 #Presentkort{
 
   background-image: url(../imgs/Dissolve_D985_58_649_master1.png);
@@ -458,13 +493,13 @@ min-height: 1000px;
 
 /*LANIDNG PAGE*/
 .landing-container {
-  height: 100vh;
+  height: 80vh;
   width: 100%;
   display: flex;
   justify-content: flex-end;
 }
 .landing-page{
-  height: 100vh;
+  height: 80vh;
   width: 100%;
   background-image: url(./imgs/chase-fade-XOLIrILp-vI-unsplash.jpg);
   background-size: cover;
@@ -505,7 +540,7 @@ min-height: 1000px;
   border: none;
   padding: 0.5rem;
   font-size: 15px;
-  width: 10em;
+  width: 12em;
   border-radius: 16px;
   color: white;
   box-shadow: 0 0.2rem #797916;

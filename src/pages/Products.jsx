@@ -49,7 +49,29 @@ const Products = () => {
   }, [selectedCategory]);
 
   return (
+    
     <div id="productsdiv">
+            <section className='landing-page'> 
+      <div className='landing-container'>
+        <div className='in-pic-container'> 
+          <div className='text-container'>
+            <div className='store-name-conatiner'>
+              <h1>BR<span className='highlighted-letter'>O</span>KEN RECORDS</h1>
+            </div>
+            <p>"Rewind, Play, Repeat: Soundtrack Your Life with Vinyl!"</p>
+          </div>
+          <div className='btn-container'>
+            <div>
+              <button className='join-btn'>Subscribe to news letter</button>
+            </div>
+            {/* <div>
+              <button className='login-btn custom-login-btn'>Login</button>
+            </div> */}
+          </div>
+        </div>
+      </div>
+      </section>
+
       <div id="filterbar">
         <input type="text" placeholder="Search" />
         <button className="sökknappar">Sök</button>
@@ -70,26 +92,6 @@ const Products = () => {
           Pop
         </button>
       </div>
-      <section className='landing-page'> 
-      <div className='landing-container'>
-        <div className='in-pic-container'> 
-          <div className='text-container'>
-            <div className='store-name-conatiner'>
-              <h1>BR<span className='highlighted-letter'>O</span>KEN RECORDS</h1>
-            </div>
-            <p>"Rewind, Play, Repeat: Soundtrack Your Life with Vinyl!"</p>
-          </div>
-          <div className='btn-container'>
-            <div>
-              <button className='join-btn'>Join us</button>
-            </div>
-            <div>
-              <button className='login-btn custom-login-btn'>Login</button>
-            </div>
-          </div>
-        </div>
-      </div>
-      </section>
 
       <StyledProductsdiv>
         <ul className="productUL">
@@ -106,9 +108,9 @@ const Products = () => {
                 <h4 className="albumInfo">Release year: {product.releaseyear}</h4>
                 <p className="priceTag">{product.price}:-</p>
               </div>
-              <Button onClick={() => handleAddToCart(product._id)} className="cartBtn">
+              <button onClick={() => handleAddToCart(product._id)} className="cartBtn">
                 Add to cart
-              </Button>
+              </button>
             </div>
           ))}
         </ul>
@@ -149,8 +151,8 @@ const Products = () => {
 };
 
 const StyledProductsdiv = styled.div`
-  margin: 10px;
-  border: 4px solid black;
+  padding: 20px;
+  width: 100%;
   min-height: 535px;
   display: flex;
   flex-direction: column;
@@ -159,23 +161,5 @@ const StyledProductsdiv = styled.div`
   align-items: center;
 `;
 
-const Button = styled.button`
-  color: rgb(241, 198, 6);
-  border: 2px solid white;
-  background: black;
-  border-radius: 5px;
-  height: 40px;
-  width: 50%;
-
-  &:hover {
-    background: rgb(241, 198, 6);
-    color: black;
-    border: 2px solid rgb(241, 198, 6);
-  }
-
-  &:active {
-    transform: scale(0.9);
-  }
-`;
 
 export default Products;

@@ -51,18 +51,21 @@ height: 50px;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  
 }
 
 #filterbar{
-  border: 1px solid black;
+  
+  height: 10vh;
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 .sökknappar{
-
-  border: 1px solid black;
+  background-color:rgb(251, 214, 4);
+  color: white;
+  font-weight: 600;
   margin-right: 20px;
   width: 60px;
   border-radius: 10px;
@@ -82,7 +85,7 @@ height: 50px;
 }
 
 .productcard{
-  background-color: rgba(96, 188, 231, 0.266) ;  
+  background-color: rgba(255, 255, 255, 0.266) ;  
   min-height: 360px;
   width: 300px;
   display: flex;
@@ -174,11 +177,11 @@ height: 50px;
               -6px -6px 12px #ffffff;
  }
  
- button:active {
+ /* button:active {
   color: #666;
   box-shadow: inset 4px 4px 12px #c5c5c5,
               inset -4px -4px 12px #ffffff;
- }
+ } */
 
 /*ADD BANNER*/
 .reklambanner{
@@ -195,7 +198,7 @@ height: 50px;
 #Presentkort{
 
   background-image: url(../imgs/Dissolve_D985_58_649_master1.png);
- filter: brightness(70%);
+  filter: brightness(60%);
  background-repeat: no-repeat;
   background-size: cover;
   background-position: top;
@@ -479,6 +482,7 @@ min-height: 1000px;
   width: 100%;
   background-image: url(./imgs/chase-fade-XOLIrILp-vI-unsplash.jpg);
   background-size: cover;
+  background-position: center;
 }
 
 .in-pic-container{

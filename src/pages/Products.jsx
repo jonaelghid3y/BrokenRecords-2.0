@@ -2,6 +2,7 @@ import React, { useState, useEffect, useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { CartContext } from '../components/CartContext';
 import styled from 'styled-components';
+import { motion} from 'framer-motion';
 
 const Products = () => {
   const { addToCart } = useContext(CartContext);
@@ -72,47 +73,60 @@ const Products = () => {
       </div>
       </section>
 
-      <div id="filterbar">
-        <input type="text" placeholder="Search" />
-        <button className="sökknappar">Sök</button>
-        <h5>Filter:</h5>
-        <button className="sökknappar" onClick={() => handleFilterClick(null)}>
-          Allt
-        </button>
-        <button className="sökknappar" onClick={() => handleFilterClick('Rock')}>
-          Rock
-        </button>
-        <button className="sökknappar" onClick={() => handleFilterClick('Jazz')}>
-          Jazz
-        </button>
-        <button className="sökknappar" onClick={() => handleFilterClick('Hiphop')}>
-          Hiphop
-        </button>
-        <button className="sökknappar" onClick={() => handleFilterClick('Pop')}>
-          Pop
-        </button>
-      </div>
+      
 
       <StyledProductsdiv>
       <div id="filterbar">
-        <input type="text" placeholder="Search" />
+        {/* <input type="text" placeholder="Search" />
         <button className="sökknappar">Sök</button>
-        <h5>Filter:</h5>
-        <button className="sökknappar" onClick={() => handleFilterClick(null)}>
+        <h5>Filter:</h5> */}
+        <motion.button 
+        whileTap={{ scale: 0.8 }}
+        whileHover={{ scale: 1.1 }}
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.5 }}
+          style={{marginLeft: '20px'}}className="sökknappar" onClick={() => handleFilterClick(null)}>
           Allt
-        </button>
-        <button className="sökknappar" onClick={() => handleFilterClick('Rock')}>
+        </motion.button>
+        <motion.button 
+        whileTap={{ scale: 0.8 }}
+        whileHover={{ scale: 1.1 }}
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.5 }}
+        className="sökknappar" onClick={() => handleFilterClick('Rock')}>
           Rock
-        </button>
-        <button className="sökknappar" onClick={() => handleFilterClick('Jazz')}>
+        </motion.button>
+        <motion.button 
+        whileTap={{ scale: 0.8 }}
+        whileHover={{ scale: 1.1 }}
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.5 }}
+        className="sökknappar" onClick={() => handleFilterClick('Jazz')}>
           Jazz
-        </button>
-        <button className="sökknappar" onClick={() => handleFilterClick('Hiphop')}>
+        </motion.button>
+        <motion.button 
+        whileTap={{ scale: 0.8 }}
+        whileHover={{ scale: 1.1 }}
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.5 }}
+        
+        className="sökknappar" onClick={() => handleFilterClick('Hiphop')}>
           Hiphop
-        </button>
-        <button className="sökknappar" onClick={() => handleFilterClick('Pop')}>
+        </motion.button>
+        <motion.button 
+        whileTap={{ scale: 0.8 }}
+        whileHover={{ scale: 1.1 }}
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.5 }}
+        
+        className="sökknappar" onClick={() => handleFilterClick('Pop')}>
           Pop
-        </button>
+        </motion.button>
       </div>
         <ul className="productUL">
           {productList.slice(0, visibleProducts).map((product) => (

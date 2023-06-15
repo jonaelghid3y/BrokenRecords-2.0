@@ -2,7 +2,6 @@ import React, { useState, useEffect, useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { CartContext } from '../components/CartContext';
 import styled from 'styled-components';
-import { motion} from 'framer-motion';
 
 const Products = () => {
   const { addToCart } = useContext(CartContext);
@@ -53,27 +52,23 @@ const Products = () => {
   }, [selectedCategory]);
 
   return (
-    
     <div id="productsdiv">
-            <section className='landing-page'> 
-      <div className='landing-container'>
-        <div className='in-pic-container'> 
-          <div className='text-container'>
-            <div className='store-name-conatiner'>
-              <h1>BR<span className='highlighted-letter'>O</span>KEN RECORDS</h1>
+      <section className='landing-page'> 
+        <div className='landing-container'>
+          <div className='in-pic-container'> 
+            <div className='text-container'>
+              <div className='store-name-conatiner'>
+                <h1>BR<span className='highlighted-letter'>O</span>KEN RECORDS</h1>
+              </div>
+              <p>"Rewind, Play, Repeat: Soundtrack Your Life with Vinyl!"</p>
             </div>
-            <p>"Rewind, Play, Repeat: Soundtrack Your Life with Vinyl!"</p>
-          </div>
-          <div className='btn-container'>
-            <div>
-              <button className='join-btn'>Subscribe to news letter</button>
+            <div className='btn-container'>
+              <div>
+                <button className='join-btn'>Subscribe to newsletter</button>
+              </div>
             </div>
-            {/* <div>
-              <button className='login-btn custom-login-btn'>Login</button>
-            </div> */}
           </div>
         </div>
-      </div>
       </section>
 
       
@@ -171,24 +166,19 @@ const Products = () => {
           </div>
         )}
       </StyledProductsdiv>
+
       <div className="reklambanner">
-
-        
+        <h1> SUMMERDEAL use code: SUN för 15% discount!</h1>
       </div>
+      
       <div id="presentkortdiv">
-      
-      <div id="Presentkort">
-
-              <div id="presentkortinnehåll">
-              <div id="presentkortkort"></div>
-              <h1 style={{width: '600px',color: 'white'}}>Gift the Soundtrack: Let Music Be Their Personal Symphony</h1>
-              </div>
+        <div id="Presentkort">
+          <div id="presentkortinnehåll">
+            <div id="presentkortkort"></div>
+            <h1 style={{ width: '600px', color: 'white' }}>Gift the Soundtrack: Let Music Be Their Personal Symphony</h1>
+          </div>
+        </div>
       </div>
-     
-     
-      </div>
-
-      
     </div>
   );
 };
@@ -203,6 +193,5 @@ const StyledProductsdiv = styled.div`
   align-content: center;
   align-items: center;
 `;
-
 
 export default Products;

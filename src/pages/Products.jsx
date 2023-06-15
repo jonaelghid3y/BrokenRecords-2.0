@@ -8,7 +8,9 @@ const Products = () => {
   const { addToCart } = useContext(CartContext);
   const [productList, setProductList] = useState([]);
   const [visibleProducts, setVisibleProducts] = useState(8);
-  const [selectedCategory, setSelectedCategory] = useState(null); // Track the selected category
+  const [selectedCategory, setSelectedCategory] = useState(null); 
+  const [activeFilter, setActiveFilter] = useState(null);
+
 
   const handleAddToCart = (productId) => {
     const productToAdd = productList.find((product) => product._id === productId);
@@ -23,6 +25,7 @@ const Products = () => {
   };
 
   const handleFilterClick = (category) => {
+    setActiveFilter(category);
     setSelectedCategory(category);
   };
 
@@ -77,57 +80,63 @@ const Products = () => {
 
       <StyledProductsdiv>
       <div id="filterbar">
-        {/* <input type="text" placeholder="Search" />
-        <button className="sökknappar">Sök</button>
-        <h5>Filter:</h5> */}
-        <motion.button 
-        whileTap={{ scale: 0.8 }}
-        whileHover={{ scale: 1.1 }}
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 0.5 }}
-          style={{marginLeft: '20px'}}className="sökknappar" onClick={() => handleFilterClick(null)}>
-          Allt
-        </motion.button>
-        <motion.button 
-        whileTap={{ scale: 0.8 }}
-        whileHover={{ scale: 1.1 }}
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 0.5 }}
-        className="sökknappar" onClick={() => handleFilterClick('Rock')}>
-          Rock
-        </motion.button>
-        <motion.button 
-        whileTap={{ scale: 0.8 }}
-        whileHover={{ scale: 1.1 }}
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 0.5 }}
-        className="sökknappar" onClick={() => handleFilterClick('Jazz')}>
-          Jazz
-        </motion.button>
-        <motion.button 
-        whileTap={{ scale: 0.8 }}
-        whileHover={{ scale: 1.1 }}
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 0.5 }}
-        
-        className="sökknappar" onClick={() => handleFilterClick('Hiphop')}>
-          Hiphop
-        </motion.button>
-        <motion.button 
-        whileTap={{ scale: 0.8 }}
-        whileHover={{ scale: 1.1 }}
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 0.5 }}
-        
-        className="sökknappar" onClick={() => handleFilterClick('Pop')}>
-          Pop
-        </motion.button>
-      </div>
+          <motion.button
+            whileTap={{ scale: 0.8 }}
+            whileHover={{ scale: 1.1 }}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.5 }}
+            style={{ marginLeft: '20px' }}
+            className={activeFilter === null ? 'sökknapparaktiverad' : 'sökknappar'}
+            onClick={() => handleFilterClick(null)}
+          >
+            Allt
+          </motion.button>
+          <motion.button
+            whileTap={{ scale: 0.8 }}
+            whileHover={{ scale: 1.1 }}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.5 }}
+            className={activeFilter === 'Rock' ? 'sökknapparaktiverad' : 'sökknappar'}
+            onClick={() => handleFilterClick('Rock')}
+          >
+            Rock
+          </motion.button>
+          <motion.button
+            whileTap={{ scale: 0.8 }}
+            whileHover={{ scale: 1.1 }}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.5 }}
+            className={activeFilter === 'Jazz' ? 'sökknapparaktiverad' : 'sökknappar'}
+            onClick={() => handleFilterClick('Jazz')}
+          >
+            Jazz
+          </motion.button>
+          <motion.button
+            whileTap={{ scale: 0.8 }}
+            whileHover={{ scale: 1.1 }}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.5 }}
+            className={activeFilter === 'Hiphop' ? 'sökknapparaktiverad' : 'sökknappar'}
+            onClick={() => handleFilterClick('Hiphop')}
+          >
+            Hiphop
+          </motion.button>
+          <motion.button
+            whileTap={{ scale: 0.8 }}
+            whileHover={{ scale: 1.1 }}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.5 }}
+            className={activeFilter === 'Pop' ? 'sökknapparaktiverad' : 'sökknappar'}
+            onClick={() => handleFilterClick('Pop')}
+          >
+            Pop
+          </motion.button>
+        </div>
         <ul className="productUL">
           {productList.slice(0, visibleProducts).map((product) => (
             <div className="productcard" key={product._id}>
@@ -164,7 +173,7 @@ const Products = () => {
       </StyledProductsdiv>
       <div className="reklambanner">
 
-        <h1> SUMMERDEAL use code: SUN för 15% discount!</h1>
+        
       </div>
       <div id="presentkortdiv">
       

@@ -197,7 +197,7 @@ const StyledNamediv = styled.div `
   dispaly: flex;
   align-items: center;
   font-family: 'Lexend', sans-serif;
-  font-size: 15px;
+  font-size: 20px;
   margin-left: 5px;
   margin-right: 5px;
 `;

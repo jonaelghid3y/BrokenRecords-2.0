@@ -14,7 +14,7 @@ const Product = () => {
   // create state variable for product and alert message
   const [product, setProduct] = useState(null);
   const [alertMessage, setAlertMessage] = useState('');
-
+  const [addedToCart, setAddedToCart] = useState(false);
   // fetch product data from API when component mounts
   useEffect(() => {
     const fetchProduct = async () => {
@@ -34,6 +34,10 @@ const Product = () => {
       if (product.stock <= 10) {
         setAlertMessage(`Only ${product.stock} left in stock!`);
       }
+      setAddedToCart(true);
+      setTimeout(() => {
+        setAddedToCart(false);
+      }, 3000); 
     }
   };
 
@@ -78,6 +82,11 @@ const Product = () => {
               OPS! This product is out of stock.
             </Alert>
           )}
+          {addedToCart && (
+            <NotificationContainer>
+              <NotificationText>Your item has been added to the cart!</NotificationText>
+            </NotificationContainer>
+          )}
           <Icons>
             <div><FaShippingFast size={25} /></div>
             <Space><SiKlarna color='pink' size={25} /></Space>
@@ -88,6 +97,19 @@ const Product = () => {
     </Wrapper>
   );
 };
+const NotificationContainer = styled.div`
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+`;
+
+const NotificationText = styled.p`
+  margin: 0;
+`;
 
 
 const Alert = styled.div`

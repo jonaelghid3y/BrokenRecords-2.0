@@ -58,9 +58,12 @@ const Nav = () => {
       
       <Stylednavbar>
         
-        <Link> <Stylednavbarlänk> Products </Stylednavbarlänk></Link> {/* OLD no need className="navbarlänk" */}
-        <Stylednavbarlänk>Giftcards </Stylednavbarlänk>
-        <Stylednavbarlänk>About </Stylednavbarlänk>
+        <Link> <Stylednavbarlänk> Products </Stylednavbarlänk></Link> 
+          
+          <Stylednavbarlänk>Giftcards </Stylednavbarlänk>
+       
+          <Link to='/about'><Stylednavbarlänk>About </Stylednavbarlänk></Link>
+
       </Stylednavbar>
       
       <Styledloggadiv>

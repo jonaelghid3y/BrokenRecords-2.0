@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { CartContext } from '../components/CartContext';
+import {motion} from 'framer-motion'
 import styled from 'styled-components';
 
 const Products = () => {
@@ -9,12 +10,26 @@ const Products = () => {
   const [visibleProducts, setVisibleProducts] = useState(8);
   const [selectedCategory, setSelectedCategory] = useState(null); 
   const [activeFilter, setActiveFilter] = useState(null);
+  const [addedToCart, setAddedToCart] = useState(false);
 
+  const handleAddedToCart = (productId) => {
+    const productToAdd = productList.find((product) => product._id === productId);
+    addToCart(productToAdd);
+    setAddedToCart(true);
+
+    setTimeout(() => {
+      setAddedToCart(false);
+    }, 2000);
+  };
+  
 
   const handleAddToCart = (productId) => {
     const productToAdd = productList.find((product) => product._id === productId);
     addToCart(productToAdd);
+    handleAddedToCart(productId); 
+
   };
+  
 
   const handleFetchProducts = async () => {
     const url = 'https://product-api-production-7dbf.up.railway.app/products';
@@ -52,29 +67,29 @@ const Products = () => {
   }, [selectedCategory]);
 
   return (
-    <div id="productsdiv">
-      <section className='landing-page'> 
-        <div className='landing-container'>
-          <div className='in-pic-container'> 
-            <div className='text-container'>
-              <div className='store-name-conatiner'>
-                <h1>BR<span className='highlighted-letter'>O</span>KEN RECORDS</h1>
+<div id="productsdiv">
+      <section className="landing-page">
+        <div className="landing-container">
+          <div className="in-pic-container">
+            <div className="text-container">
+              <div className="store-name-container">
+                <h1>
+                  BR<span className="highlighted-letter">O</span>KEN RECORDS
+                </h1>
               </div>
               <p>"Rewind, Play, Repeat: Soundtrack Your Life with Vinyl!"</p>
             </div>
-            <div className='btn-container'>
+            <div className="btn-container">
               <div>
-                <button className='join-btn'>Subscribe to newsletter</button>
+                <button className="join-btn">Subscribe to newsletter</button>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      
-
       <StyledProductsdiv>
-      <div id="filterbar">
+        <div id="filterbar">
           <motion.button
             whileTap={{ scale: 0.8 }}
             whileHover={{ scale: 1.1 }}
@@ -152,6 +167,7 @@ const Products = () => {
             </div>
           ))}
         </ul>
+
         {productList.length > 8 && (
           <div>
             {visibleProducts < productList.length ? (
@@ -165,19 +181,29 @@ const Products = () => {
             )}
           </div>
         )}
+
+     
+        {addedToCart && (
+          <NotificationContainer>
+            <NotificationText>Your item has been added to the cart!</NotificationText>
+          </NotificationContainer>
+        )}
       </StyledProductsdiv>
 
-      <div className="reklambanner">
-        <h1> SUMMERDEAL use code: SUN för 15% discount!</h1>
-      </div>
-      
+      {/* <div className="reklambanner">
+        <h1 id="reklamtext">Använd kod: DNK för 15% rabbat!</h1>
+      </div> */}
+
       <div id="presentkortdiv">
         <div id="Presentkort">
           <div id="presentkortinnehåll">
             <div id="presentkortkort"></div>
-            <h1 style={{ width: '600px', color: 'white' }}>Gift the Soundtrack: Let Music Be Their Personal Symphony</h1>
+            <h1 id="presentkorttext">Brokenrecord Giftcard: The perfect present for every occasion</h1>
           </div>
         </div>
+        <p id="giftcardtext">
+          Looking for the perfect gift for your loved ones? We're thrilled to announce that you can now purchase gift cards at our stores. Give the gift of music and let them choose their favorite vinyl records, CDs, or other musical treasures.
+        </p>
       </div>
     </div>
   );
@@ -190,8 +216,21 @@ const StyledProductsdiv = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-content: center;
   align-items: center;
 `;
+const NotificationContainer = styled.div`
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+`;
+
+const NotificationText = styled.p`
+  margin: 0;
+`;
+
 
 export default Products;

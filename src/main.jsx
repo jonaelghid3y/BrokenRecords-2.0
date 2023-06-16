@@ -14,6 +14,7 @@ import CreateProduct from './pages/admin/CreateProduct'
 import ManageProducts from './pages/admin/ManageProducts'
 import UpdateProduct from './pages/admin/UpdateProduct';
 import CartContextProvider from './components/CartContext';
+import About from './pages/About';
 
 const router = createBrowserRouter([
   {
@@ -28,6 +29,10 @@ const router = createBrowserRouter([
       {
         path: "/Product/:id",
         element: <Product />,
+      },
+      {
+        path: "/About",
+        element: <About />,
       },
       {
         path: "/Checkout",

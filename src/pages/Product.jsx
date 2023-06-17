@@ -48,11 +48,12 @@ const Product = () => {
 
   return (
     <Wrapper>
-      <ImgBackgroud>
-        <InfoContainer> 
-          <ImgContainer src={product.image} alt="" />
-        </InfoContainer>
-      </ImgBackgroud>
+      <ProdContainer>
+        <ImgBackgroud>
+          <InfoContainer> 
+            <ImgContainer src={product.image} alt="" />
+          </InfoContainer>
+        </ImgBackgroud>
       <div>
         <TextBox>
           <div>
@@ -93,10 +94,24 @@ const Product = () => {
             <Space><AiFillCreditCard size={25} /></Space>
           </Icons>
         </TextBox>
-      </div>    
+        </div>    
+      </ProdContainer>
     </Wrapper>
   );
 };
+
+const ProdContainer = styled.div `
+  display: flex;
+  background-color: rgba(80,80,80,.5);
+  backdrop-filter: blur(4px);
+  justify-content: space-around;
+  align-items: center; 
+  padding: 50px;
+  margin: 20px 30px ;
+  width: 100%;
+  border-radius: 15px;  
+
+`;
 const NotificationContainer = styled.div`
   position: fixed;
   bottom: 20px;
@@ -122,7 +137,7 @@ const Title = styled.h1`
   font-size: 45px;
   font-family: 'Lexend', sans-serif;
   text-align:left;
-  color: black;
+  color: white;;
 `;
 
 const ImgBackgroud = styled.div `
@@ -136,75 +151,88 @@ const ImgBackgroud = styled.div `
   margin: 30px 10px;
 `;
 const Wrapper = styled.div`
-  background-image: url(https://images.unsplash.com/photo-1458560871784-56d23406c091?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80);
+background-image: url(/imgs/prodbg.jpg);
   background-size: cover;
   object-fit: fit;
   display: flex;
   justify-content: right;
   align-items: center;
-  height: 900px;
+  height: 100vh;
 `; 
 const InfoContainer= styled.div`
-text-align: left;
-height: auto;
-width: 500px;
+  text-align: left;
+  height: auto;
+  width: 500px;
 `; 
 const ImgContainer = styled.img`
-  border-radius: 25px;
+  border-radius: 10px;
   height: 500px;
   width: 500px;
 `; 
 
 const TextBox = styled.div `
-  background-color: rgba(255,255,255,.5);
-  backdrop-filter: blur(10px);
   justify-content: center;
   align-items: center; 
   padding: 50px;
   margin: 30px 20px 30px 95px;
   text-align: left;
-  height: auto;
   width: 600px;
+  color: rgb(153, 153, 153);
 `;
 
 const PP = styled.div `
 display: flex;
-border-bottom: 2px solid black;
-border-top: 2px solid black;
+border-bottom: 2px solid white;
+border-top: 2px solid white;
 padding: 10px 0px 10px 0px;
 margin-top: 40px;
 `;
 const Icons = styled.div `
 display: flex;
 margin-top: 20px;
+color: white;
 `;
 const Space = styled.div` 
-   margin-left: 20px;
+  margin-left: 20px;
 `;
 
 const Quantety = styled.div `
-margin-left: 10px; 
-border: 2px solid black;
-padding: 5px;
-border-radius: 3px; 
+border: 1px solid rgb(153, 153, 153);
+border-radius: 5px; 
+padding: 10px;
+font-size: 18px;
+color: white;
+margin-left: 20px;
+
 `;
 const PriceBox = styled.div`
+width: 100px;
 background-color: skyblue;
-padding: 5px;
-border-radius: 3px; 
+padding: 10px;
+padding-left: 6%;
+border-radius: 5px; 
+font-size: 18px;
+color: black;
 `;
 
 
 const Button = styled.button`
-  color: white;
-  background: limegreen;
-  margin-top: 20px;
-  font-size: 15px;
-  font-family: 'Lexend', sans-serif;
-  padding: 2px 5px;
-  border-radius: 8px;
-  height: 35px;
-  width: 200x;
+  font-weight: 600;
+  color: black;
+  background-color:rgb(249, 204, 2);
+  padding: 10px;
+  margin-top: 25px;
+  min-width: 150px;
+  border-radius: 20px;
+  transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+
+  &:hover {
+    background-color: rgb(255, 231, 95);
+    color: black;
+    box-shadow: 0 0 20px #6fc5ff50;
+    transform: scale(1.1);
+  }
 `;
 
 

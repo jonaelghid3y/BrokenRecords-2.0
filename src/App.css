@@ -443,6 +443,7 @@ input {
   height: 200px;
   object-fit: contain;
   margin-bottom: 10px;
+ 
 }
 .backLink {
   display: block;
@@ -467,19 +468,21 @@ input {
 .DeleteButton:hover {
   background-color: #4a4e52;
 }
+/* MANAGE PRODUCTS KNAPP */
+
 #createproductnavigering {
-  width: 200px;
+
   height: 40px;
   display: flex;
   align-items: center;
-  flex-direction: row;
+
   transition: 0.5s;
   text-decoration: none;
   color: white;
   margin-top: 15px;
-  width: 120px;
+  min-width: 120px;
   padding: 10px;
-  padding-left: 20px;
+
   background-color: #04AA6D;
   color: #fff;
   border: none;

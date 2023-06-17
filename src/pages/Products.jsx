@@ -7,7 +7,7 @@ import styled from 'styled-components';
 const Products = () => {
   const { addToCart } = useContext(CartContext);
   const [productList, setProductList] = useState([]);
-  const [visibleProducts, setVisibleProducts] = useState(8);
+  const [visibleProducts, setVisibleProducts] = useState(10);
   const [selectedCategory, setSelectedCategory] = useState(null); 
   const [activeFilter, setActiveFilter] = useState(null);
   const [addedToCart, setAddedToCart] = useState(false);
@@ -48,7 +48,7 @@ const Products = () => {
   };
 
   const handleSeeLess = () => {
-    setVisibleProducts(8);
+    setVisibleProducts(10);
   };
 
   useEffect(() => {

@@ -218,6 +218,7 @@ const StyledProductsdiv = styled.div`
   justify-content: center;
   align-items: center;
 `;
+
 const NotificationContainer = styled.div`
   position: fixed;
   bottom: 20px;

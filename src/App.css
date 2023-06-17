@@ -208,12 +208,13 @@ height: 50px;
 }
 
 .productListItem { /*prduct picture*/
-  width: 300px;
-  height: 300px;
+  margin-top: 20px;
+  width: 250px;
+  height: 250px;
   background-size: contain;
   display: flex;
-  border-top-left-radius: 20px;
-  border-top-right-radius: 20px;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 1px, rgba(250, 255, 113, 0.07) 0px 2px 2px, rgba(0, 0, 0, 0.07) 0px 4px 4px, rgba(0, 0, 0, 0.07) 0px 8px 8px, rgba(0, 0, 0, 0.07) 0px 16px 16px;
  
 }.productsinfotext{
   margin-top: 20px;
@@ -227,7 +228,7 @@ height: 50px;
   text-align: center;
   margin-bottom: 5px;
   padding: 5px;
-  color: rgb(7, 7, 7);
+  color: white;
   font-size: 20px;
   text-overflow: clip;  
   overflow: hidden;
@@ -235,14 +236,14 @@ height: 50px;
 
 .albumInfo {
   font-size: 12px;
-  color: rgb(12, 12, 12);
+  color: rgb(153, 153, 153);
 }
 
 .priceTag {
   margin-top: 20px ;
   font-weight: 600;
   font-size: 16px;
-  color: rgb(0, 0, 0);
+  color: rgb(212, 212, 212);
   margin-bottom: 10px;
 }
 
@@ -275,16 +276,19 @@ height: 50px;
 
 .seemorebutton {
   margin: 20px;
-  color: #181818;
+  color:rgb(153, 153, 153);
   width: 200px;
   padding: 15px;
   font-size: 18px;
   border-radius: 0.5em;
-  background: #e8e8e8;
-  border: 1px solid #e8e8e8;
-  transition: all .3s;
-  box-shadow: 6px 6px 12px #c5c5c5,
-              -6px -6px 12px #ffffff;
+ }
+.seemorebutton:hover{
+  margin: 20px;
+  color:rgb(236, 194, 6);
+  width: 200px;
+  padding: 15px;
+  font-size: 18px;
+  border-radius: 0.5em;
  }
 
 /*ADD BANNER*/

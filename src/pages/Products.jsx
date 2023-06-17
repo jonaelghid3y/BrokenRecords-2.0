@@ -198,12 +198,13 @@ const Products = () => {
         <div id="Presentkort">
           <div id="presentkortinnehåll">
             <div id="presentkortkort"></div>
-            <h1 id="presentkorttext">Brokenrecord Giftcard: The perfect present for every occasion</h1>
+           
           </div>
-        </div>
-        <p id="giftcardtext">
+          <p id="giftcardtext">
           Looking for the perfect gift for your loved ones? We're thrilled to announce that you can now purchase gift cards at our stores. Give the gift of music and let them choose their favorite vinyl records, CDs, or other musical treasures.
         </p>
+        </div>
+      
       </div>
     </div>
   );

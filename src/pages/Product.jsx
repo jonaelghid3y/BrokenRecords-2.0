@@ -206,10 +206,11 @@ margin-left: 20px;
 
 `;
 const PriceBox = styled.div`
+display:flex;
 width: 100px;
 background-color: skyblue;
 padding: 10px;
-padding-left: 6%;
+justify-content:center;
 border-radius: 5px; 
 font-size: 18px;
 color: black;

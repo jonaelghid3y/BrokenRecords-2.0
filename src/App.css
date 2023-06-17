@@ -155,16 +155,17 @@ height: 50px;
   width: 100%;
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: center;
+  gap: 70px;
 }
 .sökknappar{
   font-weight: 600;
   color: white;
   background-color:rgb(249, 204, 2);
   margin: 20px;
-  padding: 10px;
+  padding: 5px;
   border-radius: 10px;
-  min-width: 150px;
+  min-width: 140px;
 }
 .sökknapparaktiverad{
   background-color: black;
@@ -173,7 +174,7 @@ height: 50px;
   margin: 20px;
   padding: 10px;
   border-radius: 10px;
-  min-width: 150px;
+  min-width: 140px;
 }
 
 /*PRODDUCTS*/
@@ -194,7 +195,7 @@ height: 50px;
 }
 
 .productcard{
-  background-color: rgb(59, 59, 59) ;  
+  background-color: rgb(51, 51, 51) ;  
   min-height: 360px;
   width: 300px;
   display: flex;
@@ -311,15 +312,14 @@ height: 50px;
   
 
   
-  background-image: url(../imgs/people.png);
-
+  background-image: url(../imgs/presentkortbilden.png);
 
  background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
 
   width: 100%;
-  height: 100vh;
+  height: 600px;
   display: flex;
   flex-direction: column;
   align-items:center;
@@ -336,19 +336,18 @@ height: 50px;
   align-items: center;
   flex-direction: row;
 
-  gap: 200px;
+  gap: 25px;
 
 }
 #presentkorttext{
-  width: 500px;
+  width: 300px;
   color: white;
-  background: rgba(0, 0, 0, 0.32);
-  border-radius: 16px;
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  background-color: transparent;
+  border-radius: 10px;
+  /* font-family: 'Lobster', cursive; */
+
+
   backdrop-filter: blur(5px);
-  -webkit-backdrop-filter: blur(5px);
-  border: 1px solid rgba(0, 0, 0, 0.3);
-  padding: 10px;
 }
 
 #presentkortkort{
@@ -362,7 +361,7 @@ height: 50px;
  border-radius: 10px;
  width: 400px;
  height: 250px;
-
+ box-shadow: 0 4px 8px rgba(255, 255, 255, 0.808);
 
 }
 #presentkortdiv{
@@ -376,21 +375,14 @@ height: 50px;
  align-items: center;
   text-align: center;
   width: 100%;
-  height: 100vh;
+  height: 140vh;
 }
 #giftcardtext{
   margin-top: 20vh;
-  background: rgba(0, 0, 0, 0.32);
-  border-radius: 16px;
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(5px);
-  -webkit-backdrop-filter: blur(5px);
-  border: 1px solid rgba(0, 0, 0, 0.3);
-  font-size: 20px;
-  width: 110vh;
+  font-family: 'Lobster';
+  font-size: 25px;
+  width: 150vh;
   color: white;
-  padding: 10px;
-  font-weight: 600;
   
 }
 

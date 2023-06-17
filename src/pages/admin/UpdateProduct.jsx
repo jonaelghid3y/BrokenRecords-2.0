@@ -156,7 +156,7 @@ const Styleduppdateproductsdiv = styled.div`
   padding-bottom: 100px;
   border: 1px solid black;
   min-height: 535px;
-  background-image: url(../imgs/notebook-earphones-near-vinyl-record.jpg);
+  background-image: url(https://images.unsplash.com/photo-1633012350330-a957eeb38487?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=385&q=80);
   background-size: contain;
   `;
 

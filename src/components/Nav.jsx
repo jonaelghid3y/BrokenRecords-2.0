@@ -54,6 +54,11 @@ const Nav = () => {
   const cartLength = cart.reduce((total, item) => total + item.quantity, 0);
 
   return (
+    <motion.div
+  initial={{ opacity: 0, width: '100%'}}
+  animate={{ opacity: 1 }}
+  transition={{ duration: 1.5 }}
+>
     <StyledNav>
       
       <Stylednavbar>
@@ -67,7 +72,15 @@ const Nav = () => {
       </Stylednavbar>
       
       <Styledloggadiv>
-      <StyledNamediv><h1>BROKEN </h1> </StyledNamediv>
+      <StyledNamediv>
+        <motion.h1 
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1.5}}
+        >
+          BROKEN
+        </motion.h1>      
+      </StyledNamediv>
       
         <Link to="/" style={{ color: "white" }}>
           <Styledlogdiv1>
@@ -77,15 +90,25 @@ const Nav = () => {
                 borderradius: "50%",
                 width: "40px",
                 height: "40px"
-              }}
-              
+              }}  
+              initial={{ width: 90, height: 90, opacity: 0}}
+              animate={{ width: 40, height: 40, y: 0, opacity: 1, rotate:[0, 840, 0]}}
+              transition={{ duration: 2}}          
               whileHover={{ rotate: 840, transition: { duration: 5,repeat: Infinity} }}
               id="loggabild" src="https://cdn4.iconfinder.com/data/icons/music-209/32/Music_dj_turntable_vinyl_disc-256.png"></motion.img>
           </Styledlogdiv1>
 
         </Link>
       
-        <StyledNamediv><h1> RECORDS</h1></StyledNamediv>
+        <StyledNamediv>
+        <motion.h1
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1.5}}
+        >
+            
+          RECORDS
+        </motion.h1>        </StyledNamediv>
       </Styledloggadiv>
       
 
@@ -180,6 +203,7 @@ const Nav = () => {
           </Link>
         </Styledcartbutton>
     </StyledNav>
+    </motion.div>
   );
 };
 const StyledNav = styled.nav`

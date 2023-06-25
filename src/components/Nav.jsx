@@ -5,6 +5,7 @@ import { RiUserSettingsLine } from 'react-icons/ri';
 import { CartContext } from '../components/CartContext';
 import { AiFillPlusCircle } from 'react-icons/ai';
 import { AiFillMinusCircle } from 'react-icons/ai';
+import { GiHamburgerMenu } from 'react-icons/gi';
 import { FaTrashAlt } from 'react-icons/fa';
 import "@fontsource/bebas-neue";
 import { motion } from "framer-motion"
@@ -17,6 +18,7 @@ const Nav = () => {
 
   const location = useLocation();
   const { cart, setCart, addProduct, reduceProduct, removeProduct } = useContext(CartContext);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const totalPrice = cart.reduce((total, product) => total + product.price * product.quantity, 0);
 
@@ -49,6 +51,9 @@ const Nav = () => {
   const handleCartLeave = () => {
     setIsCartOpen(false); 
   };
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
 
 
   const cartLength = cart.reduce((total, item) => total + item.quantity, 0);
@@ -71,16 +76,23 @@ const Nav = () => {
       
         <Link to="/" style={{ color: "white" }}>
           <Styledlogdiv1>
-            <motion.img
-              style={{
-                backgroundcolor: "rgb(241, 198, 6)",
-                borderradius: "50%",
-                width: "40px",
-                height: "40px"
-              }}
-              
-              whileHover={{ rotate: 840, transition: { duration: 5,repeat: Infinity} }}
-              id="loggabild" src="https://cdn4.iconfinder.com/data/icons/music-209/32/Music_dj_turntable_vinyl_disc-256.png"></motion.img>
+          <motion.div
+      initial={{ rotate: 0 }}
+      animate={{ rotate: 1080 }}
+      transition={{ duration: 4}}
+    >
+      <motion.img
+        style={{
+          backgroundColor: 'rgb(241, 198, 6)',
+          borderRadius: '50%',
+          width: '40px',
+          height: '40px'
+        }}
+        whileHover={{ rotate: 840 }}
+        src="https://cdn4.iconfinder.com/data/icons/music-209/32/Music_dj_turntable_vinyl_disc-256.png"
+        alt="Logo"
+      />
+    </motion.div>
           </Styledlogdiv1>
 
         </Link>

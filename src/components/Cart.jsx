@@ -81,9 +81,9 @@ const Cart = ({ cart }) => {
                 <Styledtd>{product.stock}</Styledtd>
                 <Styledtd>
                   <div id="knappcontainer">
-                    <motion.button whileTap={{ scale: 0.9 }} onClick={() => handlereduceProduct(product._id)}><AiFillMinusCircle /></motion.button>
+                    <motion.button style={{color: 'white'}} whileTap={{ scale: 0.9 }} onClick={() => handlereduceProduct(product._id)}><AiFillMinusCircle /></motion.button>
                     <p>{product.quantity}</p>
-                    <motion.button whileTap={{ scale: 0.9 }} onClick={() => handleAddProduct(product._id)}><AiFillPlusCircle /></motion.button>
+                    <motion.button style={{color: 'white'}} whileTap={{ scale: 0.9 }} onClick={() => handleAddProduct(product._id)}><AiFillPlusCircle /></motion.button>
                   </div>
                 </Styledtd>
                 <Styledtd>

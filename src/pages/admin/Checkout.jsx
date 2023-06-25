@@ -22,7 +22,7 @@ const Checkout = () => {
 
   };
   return (
-    <div id="checkoutdiv">
+    <div id="checkoutcontainer">
       <h1 style={{ margin: "40px", color: "white", fontSize: "60px" }}>Checkout</h1>
       <div id="formcontainer">
         <Cart cart={cart} updatecart={updatecart} setupdateCart={setupdateCart} />

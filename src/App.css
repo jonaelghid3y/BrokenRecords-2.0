@@ -475,7 +475,17 @@ input {
   background-color: #4a4e52;
 }
 /* MANAGE PRODUCTS KNAPP */
+#submitbtnlösen{
+  font-weight: 600;
+  color: white;
+  background-color:rgb(249, 204, 2);
+  margin: 20px;
+  padding: 5px;
+  border-radius: 10px;
+  min-width: 140px;
 
+
+}
 #createproductnavigering {
 
   height: 40px;
@@ -526,10 +536,10 @@ input {
 }
 
 #carthoverdiv {
-  position: absolute;
+  position: fixed;
+  top: 10.5vh;
+  right: 1vw;
   width: 500px;
-  top: 100%;
-  right: -205px;
   background: #fff;
   padding: 16px;
   border-radius: 4px;
@@ -542,6 +552,7 @@ input {
   gap: 20px;
   transition: 2s;
 }
+
 .DeleteButton:hover {
   background-color: #4a4e52;
 }
@@ -570,6 +581,9 @@ input {
   border-bottom: 1px solid lightgrey;
 
 }
+#checkoutdiven{
+
+}
 #checkoutknapp {
   all: unset;
   border-radius: 5px;
@@ -584,6 +598,7 @@ input {
   height: 25px;
 
 }
+
 #carthoverdiv td {
   text-align: center;
   vertical-align: middle;
@@ -592,17 +607,25 @@ input {
 #carthoverdiv tr:hover {
   background-color: lightgray;
 }
+#checkoutcontainer{
+  height: 200vh;
+}
 #formcontainer{
-  background-color: rgba(255,255,255,.5);
-  backdrop-filter: blur(10px);
-  box-shadow: -20px 20px 10px rgba(0,0,0,0.3);
-  margin: 0 auto;
-  background-color: white;
+  background: rgba(0, 0, 0, 0.45);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  color: white;
+
   display: flex;
  padding-top: 50px;
 justify-content: center;
   flex-direction: row;
-  width: 1400px;
+  width: 150vh;
+  height: 110vh;
+  margin-bottom: 100px;
+
 }
 .form-section{
   display: flex;
@@ -611,12 +634,7 @@ justify-content: center;
   flex-direction: column;
   width: 500px;
 }
-#formcontainer{
-  background-color: rgba(255,255,255,.5);
-  backdrop-filter: blur(10px);
 
-min-height: 1000px;
-}
 #checkoutform{
   display: flex;
   align-items: center;

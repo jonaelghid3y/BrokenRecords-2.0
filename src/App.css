@@ -247,7 +247,7 @@ height: 50px;
   font-size: 16px;
   color: rgb(212, 212, 212);
   margin-bottom: 10px;
-}
+}table
 
 .cartBtn{
   font-weight: 600;
@@ -442,6 +442,7 @@ input {
   border: none;
   border-bottom: 2px solid #0b0b0b;
   outline: none;
+  
 }
 .imagePreview {
   margin-top: 20px;
@@ -580,6 +581,12 @@ input {
   border-collapse: collapse;
   border-bottom: 1px solid lightgrey;
 
+}#checkouth1{
+  margin-top: 100px;
+  margin-bottom: 50px;
+  color: white; 
+  font-size: 60px;
+  font-family: 'Lexend', sans-serif;
 }
 #checkoutdiven{
 
@@ -614,16 +621,17 @@ input {
   background: rgba(0, 0, 0, 0.45);
   border-radius: 16px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);
   color: white;
 
   display: flex;
- padding-top: 50px;
+ 
 justify-content: center;
   flex-direction: row;
-  width: 150vh;
-  height: 110vh;
+  max-width: 150vh;
+  max-height: 110vh;
   margin-bottom: 100px;
 
 }
@@ -636,6 +644,7 @@ justify-content: center;
 }
 
 #checkoutform{
+  
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -643,9 +652,16 @@ justify-content: center;
 }
 .inputcheckout{
  border: 2px solid rgb(131, 131, 131);
- font-size: 20px;
+ font-size: 15px;
 }
-
+#cartPrice{
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+#orderbild{
+  height: 100%;
+  width: 100%;
+}
 
 /*LANIDNG PAGE*/
 .landing-container {

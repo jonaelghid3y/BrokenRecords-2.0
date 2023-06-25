@@ -4,7 +4,7 @@ import { CartContext } from '../components/CartContext';
 import {motion} from 'framer-motion'
 import styled from 'styled-components';
 
-const Products = () => {
+const Products = ( presentkortDivRef) => {
   const { addToCart } = useContext(CartContext);
   const [productList, setProductList] = useState([]);
   const [visibleProducts, setVisibleProducts] = useState(10);
@@ -208,7 +208,7 @@ const Products = () => {
         <h1 id="reklamtext">Använd kod: DNK för 15% rabbat!</h1>
       </div> */}
 
-      <div id="presentkortdiv">
+      <div id="presentkortdiv" ref={presentkortDivRef}>
         <div id="Presentkort">
           <div id="presentkortinnehåll">
             <div id="presentkortkort"></div>

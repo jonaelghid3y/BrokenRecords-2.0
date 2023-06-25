@@ -40,7 +40,7 @@ const Cart = ({ cart }) => {
     return (
       <div className="cart__empty">
         
-        <h1 style={{borderBottom: "1px solid black", marginTop: "50px" , marginBottom: "50px"}}>Your cart is empty!</h1>
+        <h1 style={{borderBottom: "1px solid black", margin: "50px"}}>Your cart is empty!</h1>
         <Link to="/" className="backLink">
           &#8592; Back
         </Link>
@@ -51,7 +51,7 @@ const Cart = ({ cart }) => {
 
   return (
     <>
-      <div style={{borderBottom: "1px solid black", width:"100%"}} className="cart__container">
+      <div style={{ width:"100%"}} className="cart__container">
         <h1 >Cart</h1>
         <Styledtable>
           
@@ -81,33 +81,39 @@ const Cart = ({ cart }) => {
                 <Styledtd>{product.stock}</Styledtd>
                 <Styledtd>
                   <div id="knappcontainer">
-                    <motion.button style={{color: 'white'}} whileTap={{ scale: 0.9 }} onClick={() => handlereduceProduct(product._id)}><AiFillMinusCircle /></motion.button>
+                    <motion.button style={{color: 'white'}} whileHover={{scale: 1.2}} whileTap={{ scale: 0.8 }} onClick={() => handlereduceProduct(product._id)}><AiFillMinusCircle size={20} /></motion.button>
                     <p>{product.quantity}</p>
-                    <motion.button style={{color: 'white'}} whileTap={{ scale: 0.9 }} onClick={() => handleAddProduct(product._id)}><AiFillPlusCircle /></motion.button>
+                    <motion.button style={{color: 'white'}} whileHover={{scale: 1.2}} whileTap={{ scale: 0.8 }} onClick={() => handleAddProduct(product._id)}><AiFillPlusCircle size={20} /></motion.button>
                   </div>
                 </Styledtd>
                 <Styledtd>
+                  <motion.div whileHover={{scale: 1.2}} whileTap={{ scale: 0.8 }}>
                   <Styleddeletebutton onClick={() => handleremoveProduct(product._id)}>Remove<FaTrashAlt /></Styleddeletebutton>
+                  </motion.div>
                 </Styledtd>
               </tr>
             ))}
           </tbody>
         </Styledtable>
-        <h4>Total price: Kr{totalPrice}</h4>
+        <h4 id="cartPrice">Total price: Kr{totalPrice}</h4>
+        <motion.div whileHover={{scale: 1.2}} whileTap={{ scale: 0.8 }}>
         <Styleddeletebutton style={{marginBottom:"100px"}} onClick={emptyCart}>Empty Cart</Styleddeletebutton>
+        </motion.div>
+  
       </div>
     </>
   );
 }
 
 const Styledtd = styled.td`
-  border-bottom: 1px solid grey;
+  border-bottom: 1px solid rgb(249, 204, 2);;
   text-align: left;
   padding: 8px;
+
 `;
 
 const Styledth = styled.th`
-  border-bottom: 1px solid grey;
+  border-bottom: 1px solid rgb(249, 204, 2);;
   text-align: center;
   padding: 8px;
 `;
@@ -115,7 +121,7 @@ const Styledth = styled.th`
 const Styledtable = styled.table`
   margin-top: 20px;
   border-collapse: collapse;
-  border-bottom: 1px solid grey;
+  border-bottom: 1px solid rgb(249, 204, 2);;
 
   width: 100%;
   padding-top: 50px;
@@ -127,7 +133,7 @@ const Styleddeletebutton = styled.button`
   align-items: center;
   gap: 10px;
   color: white;
-
+  height: 25px;
   background-color: #921616;
   margin: 0 auto;
   padding: 5px;
@@ -135,9 +141,7 @@ const Styleddeletebutton = styled.button`
   border-radius: 3px;
   transition: all 0.2s ease-in-out;
 
-  &:active {
-    transform: scale(0.9);
-  }
+
  
 `;
 

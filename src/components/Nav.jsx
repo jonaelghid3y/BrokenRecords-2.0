@@ -1,5 +1,6 @@
 import React, { useContext, useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
+import { Link as ScrollLink } from "react-scroll";
 import { BsCart4 } from 'react-icons/bs';
 import { RiUserSettingsLine } from 'react-icons/ri';
 import { CartContext } from '../components/CartContext';
@@ -12,7 +13,7 @@ import { motion } from "framer-motion"
 import styled from 'styled-components';
 
 
-const Nav = () => {
+const Nav = ({ presentkortDivRef }) => {
 
 
 
@@ -55,6 +56,20 @@ const Nav = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
+ 
+    const presentkortDivRef = useRef(null);
+
+  
+    const scrollToPresentkortDiv = () => {
+      presentkortDivRef.current.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    };
+  
+
+  
+
 
   const cartLength = cart.reduce((total, item) => total + item.quantity, 0);
 
@@ -68,9 +83,10 @@ const Nav = () => {
       
       <Stylednavbar>
         
-        <Link> <Stylednavbarlänk> Products </Stylednavbarlänk></Link> 
+        <Link><Stylednavbarlänk> Products </Stylednavbarlänk></Link> 
           
-          <Stylednavbarlänk>Giftcards </Stylednavbarlänk>
+      
+      <Stylednavbarlänk  onClick={scrollToPresentkortDiv}>Giftcards </Stylednavbarlänk> 
        
           <Link to='/about'><Stylednavbarlänk>About </Stylednavbarlänk></Link>
 

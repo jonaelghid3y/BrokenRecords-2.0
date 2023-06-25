@@ -72,16 +72,30 @@ const Products = () => {
         <div className="landing-container">
           <div className="in-pic-container">
             <div className="text-container">
-              <div className="store-name-container">
-                <h1>
-                  BR<span className="highlighted-letter">O</span>KEN RECORDS
-                </h1>
-              </div>
-              <p>"Rewind, Play, Repeat: Soundtrack Your Life with Vinyl!"</p>
+              <motion.div
+                  className="store-name-container"
+                  initial={{ opacity: 0, y: -20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 1.5, delay: 0.8}}
+                >
+                  <h1>
+                    BR<span className="highlighted-letter">O</span>KEN RECORDS
+                  </h1>
+                </motion.div>
+              <motion.p
+                initial={{ opacity: 0, y: -20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 1.5, delay: 0.8}}
+              >
+                " Rewind, Play, Repeat: Soundtrack Your Life with Vinyl! "
+              </motion.p>
             </div>
             <div className="btn-container">
               <div>
-                <button className="join-btn">Subscribe to newsletter</button>
+                <motion.button className="join-btn" 
+                initial={{ opacity: 0, y: -20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 1.5, delay: 1}}>Subscribe to newsletter</motion.button>
               </div>
             </div>
           </div>

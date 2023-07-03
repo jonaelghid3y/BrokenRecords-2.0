@@ -132,7 +132,7 @@ const Styledform = styled.form`
   color: #fff;
   padding: 20px;
   border-radius: 5px;
-  width: 700px;
+  width: 95vw;
   display: flex;
   align-items: center;
   flex-direction: column;

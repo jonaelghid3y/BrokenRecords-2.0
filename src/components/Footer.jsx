@@ -29,7 +29,7 @@ const Footer = () => {
             <p>Return & QA</p>
           </CustomerService>
         </div>
-        <div>
+        {/* <div>
         <ExtraSpace>
           Pay with
         </ExtraSpace>
@@ -51,7 +51,7 @@ const Footer = () => {
             <AiFillFacebook size={25}/>
             <RiSpotifyFill size={25}/>
           </SocialLogos>
-        </div>
+        </div> */}
       </FooterContent>   
     </FooterTop >
 
@@ -61,15 +61,21 @@ const Footer = () => {
 const FooterTop = styled.div`
   background: black;
   display: flex;
+  width:100%
   justify-content: center;
   aline-itenms: center;
   flex-direction: row;
   background-color: black;
+  @media (max-width: 768px) {
+    font-size: 15px;
+    
+  }
 `;
 
 const FooterContent = styled.div`
-  padding:30px;
-  width: 2400px;
+
+  padding:3vw;
+  width: 100%;
   height: 180px;
   color: white;
   display: flex;
@@ -132,7 +138,7 @@ display: flex;
 }
 `;
 const ExtraSpace = styled.h3`
-  margin-left: 20px;
+  // margin-left: 20px;
 `;
 
 export default Footer

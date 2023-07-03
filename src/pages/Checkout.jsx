@@ -127,7 +127,9 @@ display: flex;
 align-items: center;
 justify-content: center;
 flex-direction:  column;
-width: 1540px;
+width: 100%;
+
+
 `;
 
 export default Checkout;

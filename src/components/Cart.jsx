@@ -51,26 +51,26 @@ const Cart = ({ cart }) => {
 
   return (
     <>
-      <div style={{ width:"100%"}} className="cart__container">
-        <h1 >Cart</h1>
+      <div  className="cart__container">
+        <h1 style={{marginTop: '50px'}} >Cart</h1>
         <Styledtable>
           
-          <thead>
-            <tr>
+          <thead >
+           
               <Styledth>Album</Styledth>
               <Styledth></Styledth>
               <Styledth>Price</Styledth>
               <Styledth>Stock</Styledth>
               <Styledth>Quantity</Styledth>
               <Styledth>Delete</Styledth>
-            </tr>
+            
           </thead>
           
           <tbody>
             {cart.map((product) => (
              <tr key={product._id}>
                 <Styledtd>
-                  <img className="cart__img" src={product.image} style={{ height: "100px", width: "100px" }} />
+                  <img className="cart__img" src={product.image} />
                 </Styledtd>
                 <Styledtd id="carttable">
                   <h4>{product.title}</h4>
@@ -88,14 +88,14 @@ const Cart = ({ cart }) => {
                 </Styledtd>
                 <Styledtd>
                   <motion.div whileHover={{scale: 1.2}} whileTap={{ scale: 0.8 }}>
-                  <Styleddeletebutton onClick={() => handleremoveProduct(product._id)}>Remove<FaTrashAlt /></Styleddeletebutton>
+                  <Styleddeletebutton onClick={() => handleremoveProduct(product._id)}><FaTrashAlt /></Styleddeletebutton>
                   </motion.div>
                 </Styledtd>
               </tr>
             ))}
           </tbody>
         </Styledtable>
-        <h4 id="cartPrice">Total price: Kr{totalPrice}</h4>
+        <h3 id="cartPrice">Total price: {totalPrice} Kr</h3>
         <motion.div whileHover={{scale: 1.2}} whileTap={{ scale: 0.8 }}>
         <Styleddeletebutton style={{marginBottom:"100px"}} onClick={emptyCart}>Empty Cart</Styleddeletebutton>
         </motion.div>
@@ -109,6 +109,14 @@ const Styledtd = styled.td`
   border-bottom: 1px solid rgb(249, 204, 2);;
   text-align: left;
   padding: 8px;
+  @media (max-width: 992px) {
+
+    padding: 2px;
+    font-size: 10px;
+   
+  
+  
+  }
 
 `;
 
@@ -116,6 +124,15 @@ const Styledth = styled.th`
   border-bottom: 1px solid rgb(249, 204, 2);;
   text-align: center;
   padding: 8px;
+  @media (max-width: 992px) {
+
+    padding: 2px;
+    font-size: 10px;
+   
+  
+  
+  }
+  
 `;
 
 const Styledtable = styled.table`
@@ -126,6 +143,8 @@ const Styledtable = styled.table`
   width: 100%;
   padding-top: 50px;
   padding-bottom: 50px;
+  
+  
 `;
 
 const Styleddeletebutton = styled.button`

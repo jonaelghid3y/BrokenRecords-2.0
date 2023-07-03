@@ -7,14 +7,14 @@ import styled from 'styled-components';
 
 
 
-const Header = ({presentkortDivRef} ) => {
+const Header = () => {
 
   const cartContext = useContext(CartContext);
   const { cart } = cartContext;
 
   return (
     <StyledHeaderdiv>
-      <Nav presentkortDivRef={presentkortDivRef} cartLength={cart.length} cart={cart} />
+      <Nav cartLength={cart.length} cart={cart} />
     </StyledHeaderdiv>
   )
 }

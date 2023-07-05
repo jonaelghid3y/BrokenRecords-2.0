@@ -176,10 +176,10 @@ const Products = () => {
                 <h4 className="albumInfo">{product.description}</h4>
                 <h4 className="albumInfo">Release year: {product.releaseyear}</h4>
                 <p className="priceTag">{product.price}:-</p>
-              </div>
-              <button onClick={() => handleAddToCart(product._id)} className="cartBtn">
+              <button onClick={() => handleAddToCart(product._id)} className="buyBtn">
                 Add to cart
               </button>
+              </div>
             </div>
           ))}
         </ul>

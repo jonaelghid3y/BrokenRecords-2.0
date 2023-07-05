@@ -372,7 +372,7 @@ a {
  border: solid 1px black;
  background-color: grey;
  border-radius: 10px;
- width: 40vw;
+ width: 400px;
  height: 250px;
 
 
@@ -521,18 +521,19 @@ input {
 
 #uppdateraKnapp {
   
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   border-radius: 5px;
   color: white;
   border: none;
   background-color: #04AA6D;
   text-align: center;
-  padding: 0;
-  padding: 5px;
+ 
   font-weight: bold;
   text-decoration: none;
-  height: 25px;
-  width: 40px;
+  height: 35px;
+  width: 64px;
   margin-bottom: 5px;
 
 }
@@ -583,7 +584,7 @@ input {
 }
 
 #carthoverdiv {
-  width: 100%;
+ 
   border-collapse: collapse;
   border-bottom: 1px solid lightgrey;
 
@@ -644,6 +645,16 @@ justify-content: center;
   width: 90%;
   min-height: 100vh;
   margin-bottom: 100px;
+
+}
+#knappcontainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  padding: 10px;
+  gap: 10px;
+ 
 
 }
 .form-section{
@@ -752,6 +763,44 @@ justify-content: center;
   cursor: auto;
   color: grey;
 }
+#aboutdiv{
+  width: 100%;
+  min-height: 100vh;
+  scroll-behavior: smooth;
+
+}
+#parallax{
+  background-image: url(https://i.redd.it/x46ev4tgzyu51.jpg);
+  min-height: 600px;
+
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-bottom: -20px;
+
+}
+#parallax2{
+  background-image: url(https://www.billboard.com/wp-content/uploads/media/the-beatles-shea-stadium-billboard-1548.jpg?w=942&h=623&crop=1);
+  min-height: 600px;
+
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-top: -20px ;
+
+}
+#parallaxtextdiv{
+  background-color: white;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 400px;
+  clip-path: polygon(100% 0%, 0% 5%, 0% 95%, 100% 100%);
+}
+
 @media only screen and (max-width: 992px) {
 
   #loggabild{
@@ -918,10 +967,13 @@ justify-content: center;
     width: 50px;
   }
   #knappcontainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     flex-direction: column;
-    padding: 10px;
-    gap: 20px;
-    padding-top: 20px;;
+    padding: 5px;
+    gap: 5px;
+    
   
   }
   #uppdateraKnapp {
@@ -932,9 +984,15 @@ justify-content: center;
     text-decoration: none;
     height: 20px;
     font-size: 10px;
-    width: 45px;
+    width: 40px;
   
   }
+  #carthoverdiv {
+  
+    width: 350px;
+   
+  }
+  
   
   
   

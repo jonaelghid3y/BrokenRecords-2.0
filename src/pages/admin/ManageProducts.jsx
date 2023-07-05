@@ -93,7 +93,7 @@ const ManageProducts = () => {
                 <Styledtd>{products.stock}</Styledtd>
                 <Styledtd >
                   <Link id="uppdateraKnapp" to={`/admin/Updateproduct/${products['_id']}`}>
-                    Change
+                    Update
                   </Link>
                   <Styleddeletebutton
                     id="raderaKnapp"
@@ -139,7 +139,7 @@ background-size: cover;
 
 const Styledtable = styled.table`
 border-collapse: collapse;
-width: 80%;
+width: 60%;
 padding-top: 50px;
 padding-bottom: 50px;
 font-size: 18px;

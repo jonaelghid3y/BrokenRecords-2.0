@@ -107,7 +107,7 @@ const Cart = ({ cart }) => {
 
 const Styledtd = styled.td`
   border-bottom: 1px solid rgb(249, 204, 2);;
-  text-align: left;
+  text-align: center;
   padding: 8px;
   @media (max-width: 992px) {
 

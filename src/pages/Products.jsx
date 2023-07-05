@@ -11,7 +11,7 @@ const Products = () => {
   const [selectedCategory, setSelectedCategory] = useState(null); 
   const [activeFilter, setActiveFilter] = useState(null);
   const [addedToCart, setAddedToCart] = useState(false);
-
+  
   const handleAddedToCart = (productId) => {
     const productToAdd = productList.find((product) => product._id === productId);
     addToCart(productToAdd);

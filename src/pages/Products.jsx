@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useContext } from 'react';
+import React, { useState, useEffect, useContext, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { CartContext } from '../components/CartContext';
 import {motion} from 'framer-motion'
@@ -11,7 +11,9 @@ const Products = () => {
   const [selectedCategory, setSelectedCategory] = useState(null); 
   const [activeFilter, setActiveFilter] = useState(null);
   const [addedToCart, setAddedToCart] = useState(false);
-  
+
+    const presentkortDivRef = useRef(null);
+
   const handleAddedToCart = (productId) => {
     const productToAdd = productList.find((product) => product._id === productId);
     addToCart(productToAdd);
@@ -102,7 +104,7 @@ const Products = () => {
         </div>
       </section>
 
-      <StyledProductsdiv>
+      <StyledProductsdiv id="productdiv">
         <div id="filterbar">
           <motion.button
             whileTap={{ scale: 0.8 }}
@@ -110,7 +112,7 @@ const Products = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.5 }}
-            style={{ marginLeft: '20px' }}
+         
             className={activeFilter === null ? 'sökknapparaktiverad' : 'sökknappar'}
             onClick={() => handleFilterClick(null)}
           >
@@ -161,7 +163,7 @@ const Products = () => {
             Pop
           </motion.button>
         </div>
-        <ul className="productUL">
+        <ul id="productUL">
           {productList.slice(0, visibleProducts).map((product) => (
             <div className="productcard" key={product._id}>
               <Link to={`/Product/${product._id}`}>
@@ -208,7 +210,7 @@ const Products = () => {
         <h1 id="reklamtext">Använd kod: DNK för 15% rabbat!</h1>
       </div> */}
 
-      <div id="presentkortdiv">
+      <div id="presentkortdiv" ref={presentkortDivRef}>
         <div id="Presentkort">
           <div id="presentkortinnehåll">
             <div id="presentkortkort"></div>

@@ -57,14 +57,14 @@ const ManageProducts = () => {
     {authenticated ? (
       <>
         <Styledh1div>
-          <h1 id="h1manage" style={{ fontSize: '60px' }}>
+          <h1 id="h1manage" >
             Manage products
           </h1>
           <Link id="createproductnavigering" to="/admin/createProduct">
             Add products
           </Link>
         </Styledh1div>
-        <Styledtable id="table">
+        <Styledtable >
           <thead style={{ backgroundColor: 'rgb(38, 38, 38)', color: 'white' }}>
             <tr>
               <Styledth>Image</Styledth>
@@ -80,9 +80,9 @@ const ManageProducts = () => {
             <tbody key={products['_id']}>
               <Styledtr>
                 <Styledtd>
-                  <img
+                  <img className="cart__img" 
                     src={products.image}
-                    style={{ height: '70px', width: '70px', margin: '0', padding: '0' }}
+                    
                     alt="Product"
                   ></img>
                 </Styledtd>
@@ -91,9 +91,9 @@ const ManageProducts = () => {
                 <Styledtd>{products.releaseyear}</Styledtd>
                 <Styledtd>{products.price}</Styledtd>
                 <Styledtd>{products.stock}</Styledtd>
-                <Styledtd id="knappcontainer">
+                <Styledtd >
                   <Link id="uppdateraKnapp" to={`/admin/Updateproduct/${products['_id']}`}>
-                    Change
+                    Update
                   </Link>
                   <Styleddeletebutton
                     id="raderaKnapp"
@@ -132,37 +132,90 @@ justify-content: center;
 align-items: center;
 flex-direction: column;
 padding-bottom: 100px;
-min-height: 535px;
+
 background-image: url(https://images.unsplash.com/photo-1633012350330-a957eeb38487?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=385&q=80);
 background-size: cover;
 `;
 
 const Styledtable = styled.table`
 border-collapse: collapse;
-width: 80%;
+width: 60%;
 padding-top: 50px;
 padding-bottom: 50px;
 font-size: 18px;
 background-color: rgba(255, 255, 255, 0.5);
 backdrop-filter: blur(10px);
 color: black;
+text-overflow: ellipsis;
+
+  
+
+@media (max-width: 992px) {
+
+
+  font-size: 12px;
+  
+ 
+ 
+  
+
+
+}
 `;
 
 const Styledtd = styled.td`
 border: 1px solid grey;
 text-align: left;
 padding: 8px;
+text-overflow: ellipsis;
+overflow: hidden;
+@media (max-width: 992px) {
+
+
+  max-width: 40px;
+  text-overflow: ellipsis;
+  padding:2px;
+  
+
+
+}
+
 `;
 
 const Styledth = styled.th`
 text-align: left;
 padding: 8px;
+text-overflow: ellipsis;
+
+    overflow: hidden;
+@media (max-width: 992px) {
+
+
+  width: 40px;
+  padding:2px;
+  
+
+
+}
+
 `;
 
 const Styledtr = styled.tr`
 &:hover {
   background-color: rgba(255, 255, 255, 0.7);
   border: 1px solid white;
+  text-overflow: ellipsis;
+  
+    overflow: hidden;
+  @media (max-width: 992px) {
+
+
+    width: 40px;
+    padding:2px;
+    
+  
+  
+  }
 }
 `;
 
@@ -175,9 +228,18 @@ gap: 50px;
 color: white;
 margin-top: 50px;
 margin-bottom: 50px;
-width: 1211px;
+width: 80vw;
 font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 font-weight: bold;
+@media (max-width: 992px) {
+
+  flex-direction: column;
+  font-size: 15px;
+  gap: 20px;
+ 
+
+
+}
 `;
 
 const PasswordForm = styled.form`
@@ -201,6 +263,15 @@ font-weight: bold;
 height: 35px;
 &:active {
   transform: scale(0.9);
+}
+@media (max-width: 992px) {
+
+
+ font-size: 10px;
+ height: 20px;
+  
+
+
 }
 `;
 

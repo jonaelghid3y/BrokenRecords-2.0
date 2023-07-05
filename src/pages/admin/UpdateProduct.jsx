@@ -148,7 +148,7 @@ const UpdateProduct = () => {
 }
 
 const Styleduppdateproductsdiv = styled.div`
-  min-height: 535px;
+ width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -165,10 +165,17 @@ const Styleduppdateproductsdiv = styled.div`
   color: #fff;
   padding: 20px;
   border-radius: 5px;
-  width: 700px;
+  width: 35vw;
   display: flex;
   align-items: center;
   flex-direction: column; 
+  @media (max-width: 992px) {
+
+    width: 90vw;
+   
+  
+  
+  }
 `;
 
 

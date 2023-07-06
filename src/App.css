@@ -152,12 +152,11 @@ a {
   box-shadow: 0 1px 24px 0 rgb(31, 31, 31);
   background-color: rgb(41, 41, 41) !important;
   animation: 500ms ease-in-out 0s normal none 1 running fadeInDown;
-}
-#filterbar{
   height: 10vh;
   width: 100%;
   display: flex;
   align-items: center;
+  margin-bottom: 15px;
 }
 
 /* PRODUCT LIST CARDS */
@@ -202,7 +201,7 @@ a {
 .productcard{
 
   background-color: rgb(51, 51, 51) ;  
-  min-height: 360px;
+  min-height: 100px;
   width: 300px;
   display: flex;
   flex-direction: column;
@@ -252,12 +251,12 @@ a {
   font-size: 16px;
   color: rgb(212, 212, 212);
   margin-bottom: 10px;
-}table
+}
 
-.cartBtn{
+button.buyBtn {
   font-weight: 600;
   color: white;
-  background-color:rgb(249, 204, 2);
+  background-color: rgb(249, 204, 2);
   margin: 20px;
   padding: 10px;
   min-width: 150px;
@@ -266,20 +265,21 @@ a {
   -webkit-transition: all 0.5s;
 }
 
-.cartBtn:hover {
+button.buyBtn:hover {
   background-color: rgb(255, 231, 95);
   color: black;
   box-shadow: 0 0 20px #6fc5ff50;
   transform: scale(1.1);
 }
 
-.cartBtn:active {
+button.buyBtn:active {
   background-color: rgb(207, 176, 2);
   transition: all 0.25s;
   -webkit-transition: all 0.25s;
   box-shadow: none;
   transform: scale(0.98);
 }
+
 
 .seemorebutton {
   margin: 20px;
@@ -829,20 +829,24 @@ justify-content: center;
   .btn-container {
     width: 200px;
   }
+
   #filterbar{
-    height: 20vh;
+    height: 10vh;
     width: 100%;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     padding: 20px;
     gap: 20px;
+    overflow: auto;
+    white-space: nowrap;
+    margin-bottom: 15px;
   }
   .sökknappar{
     font-weight: 600;
     color: white;
     background-color:rgb(249, 204, 2);
-    
     padding: 5px 10px;
     border-radius: 10px;
     width: 65px;
@@ -857,20 +861,19 @@ justify-content: center;
     width: 65px;
     font-size: 15px;
   }
-  .productcard{
 
-   
-    min-height: 360px;
-    width: 300px;
+  .productcard{ 
+    height: 120px;
+    width: 100%;
     display: flex;
-    flex-direction: column;
+    flex-direction:row;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: center;
+    padding: 10px;
   
   }
-  
   .productListItem { /*prduct picture*/
-    margin-top: 20px;
+    margin-top: 0;
     width: 100px;
     height: 100px;
     background-size: contain;
@@ -879,7 +882,7 @@ justify-content: center;
     box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 1px, rgba(250, 255, 113, 0.07) 0px 2px 2px, rgba(0, 0, 0, 0.07) 0px 4px 4px, rgba(0, 0, 0, 0.07) 0px 8px 8px, rgba(0, 0, 0, 0.07) 0px 16px 16px;
    
   }.productsinfotext{
-    margin-top: 20px;
+    margin-top: 5px;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -892,22 +895,46 @@ justify-content: center;
     padding: 5px;
     color: white;
     font-size: 15px;
-    text-overflow: clip;  
+    white-space: nowrap;
     overflow: hidden;
+    text-overflow: clip;
   }
   
   .albumInfo {
-    font-size: 12px;
-    color: rgb(153, 153, 153);
+   display: none;
   }
-  
   .priceTag {
-    margin-top: 20px ;
+    margin-top: 0;
     font-weight: 600;
-    font-size: 16px;
+    font-size: 13px;
     color: rgb(212, 212, 212);
     margin-bottom: 10px;
   }
+  button.buyBtn{
+    font-weight: 600;
+    color: white;
+    background-color:rgb(249, 204, 2);
+    margin: 0;
+    padding: 2.5px;
+    min-width: 150px;
+    border-radius: 20px;
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+  }
+button.buyBtn:focus,
+button.buyBtn:active {
+  background-color: rgb(249, 204, 2);
+  box-shadow: none;
+  transform: scale(0.98);
+  transition: all 0.25s;
+  -webkit-transition: all 0.25s;
+}
+
+.buyBtn:focus:not(:active) {
+  transform: scale(1);
+}
+
+
   #presentkortkort{
     background-image: url(../imgs/kort.png);
     border: 1px solid white;

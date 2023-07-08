@@ -160,9 +160,6 @@ a {
 }
 
 /* PRODUCT LIST CARDS */
-
-
-
 .sökknappar{
   font-weight: 600;
   color: white;
@@ -185,7 +182,6 @@ a {
 #productUL {
   box-shadow: 0 1px 24px 0 rgb(31, 31, 31);
   background-color: rgb(41, 41, 41) !important;
-  /* margin: 20px 50px; */
   padding:20px;
   width: 97vw;
   min-height: 10vw;
@@ -321,11 +317,9 @@ button.buyBtn:active {
 /*GIFT CARD*/
 #Presentkort{
   
-
-  
   background-image: url(../imgs/people.png);
 
- background-repeat: no-repeat;
+  background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
 
@@ -355,7 +349,6 @@ button.buyBtn:active {
   color: white;
   background-color: transparent;
   border-radius: 10px;
-  /* font-family: 'Lobster', cursive; */
 
 
   backdrop-filter: blur(5px);
@@ -412,12 +405,42 @@ border: 1px solid rgba(0, 0, 0, 0.3);
   width: 25px;
   height: 25px;
 }
+.FooterContent{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.phone-container{
+  display: flex;
+  margin: 20px;
+  /* justify-content: space-between; */
+}
+.CustomerService{
+  display: flex;
+  margin-right: 50px;
+}
+.rightContainer{
+  margin-top: 6px;
+  display: flex;
+  justify-content: space-evenly;
 
+} 
+.payHeadline{
+  width: 100%;
 
+} 
 
+.socialContainer {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
 
-
-
+.SocialLogos {
+  /* width: 100%;
+  display: flex;
+  margin-top: 2px ; */
+}
 
 
 
@@ -819,7 +842,6 @@ justify-content: center;
 
 .payHeadline {
   justify-content: center;
-  height: 30px;
 }
 
 .SocialLogos {

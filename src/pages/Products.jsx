@@ -1,18 +1,21 @@
 import React, { useState, useEffect, useContext, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { CartContext } from '../components/CartContext';
-import {motion} from 'framer-motion'
+import { motion } from 'framer-motion'
+
+
+
 import styled from 'styled-components';
 
 const Products = () => {
   const { addToCart } = useContext(CartContext);
   const [productList, setProductList] = useState([]);
   const [visibleProducts, setVisibleProducts] = useState(10);
-  const [selectedCategory, setSelectedCategory] = useState(null); 
+  const [selectedCategory, setSelectedCategory] = useState(null);
   const [activeFilter, setActiveFilter] = useState(null);
   const [addedToCart, setAddedToCart] = useState(false);
 
-    const presentkortDivRef = useRef(null);
+  const presentkortDivRef = useRef(null);
 
   const handleAddedToCart = (productId) => {
     const productToAdd = productList.find((product) => product._id === productId);
@@ -23,15 +26,15 @@ const Products = () => {
       setAddedToCart(false);
     }, 2000);
   };
-  
+
 
   const handleAddToCart = (productId) => {
     const productToAdd = productList.find((product) => product._id === productId);
     addToCart(productToAdd);
-    handleAddedToCart(productId); 
+    handleAddedToCart(productId);
 
   };
-  
+
 
   const handleFetchProducts = async () => {
     const url = 'https://product-api-production-7dbf.up.railway.app/products';
@@ -69,35 +72,35 @@ const Products = () => {
   }, [selectedCategory]);
 
   return (
-<div id="productsdiv">
+    <div id="productsdiv">
       <section className="landing-page">
         <div className="landing-container">
           <div className="in-pic-container">
             <div className="text-container">
               <motion.div
-                  className="store-name-container"
-                  initial={{ opacity: 0, y: -20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 1.5, delay: 0.8}}
-                >
-                  <h1>
-                    BR<span className="highlighted-letter">O</span>KEN RECORDS
-                  </h1>
-                </motion.div>
+                className="store-name-container"
+                initial={{ opacity: 0, y: -20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 1.5, delay: 0.8 }}
+              >
+                <h1>
+                  BR<span className="highlighted-letter">O</span>KEN RECORDS
+                </h1>
+              </motion.div>
               <motion.p
                 initial={{ opacity: 0, y: -20 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 1.5, delay: 0.8}}
+                transition={{ duration: 1.5, delay: 0.8 }}
               >
                 " Rewind, Play, Repeat: Soundtrack Your Life with Vinyl! "
               </motion.p>
             </div>
             <div className="btn-container">
               <div>
-                <motion.button className="join-btn" 
-                initial={{ opacity: 0, y: -20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 1.5, delay: 1}}>Subscribe to newsletter</motion.button>
+                <motion.button className="join-btn"
+                  initial={{ opacity: 0, y: -20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 1.5, delay: 1 }}>Subscribe to newsletter</motion.button>
               </div>
             </div>
           </div>
@@ -112,7 +115,7 @@ const Products = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.5 }}
-         
+
             className={activeFilter === null ? 'sökknapparaktiverad' : 'sökknappar'}
             onClick={() => handleFilterClick(null)}
           >
@@ -176,9 +179,9 @@ const Products = () => {
                 <h4 className="albumInfo">{product.description}</h4>
                 <h4 className="albumInfo">Release year: {product.releaseyear}</h4>
                 <p className="priceTag">{product.price}:-</p>
-              <button onClick={() => handleAddToCart(product._id)} className="buyBtn">
-                Add to cart
-              </button>
+                <button onClick={() => handleAddToCart(product._id)} className="buyBtn">
+                  Add to cart
+                </button>
               </div>
             </div>
           ))}
@@ -198,7 +201,7 @@ const Products = () => {
           </div>
         )}
 
-     
+
         {addedToCart && (
           <NotificationContainer>
             <NotificationText>Your item has been added to the cart!</NotificationText>
@@ -214,13 +217,19 @@ const Products = () => {
         <div id="Presentkort">
           <div id="presentkortinnehåll">
             <div id="presentkortkort"></div>
-           
+
           </div>
-          <p id="giftcardtext">
-          Looking for the perfect gift for your loved ones? We're thrilled to announce that you can now purchase gift cards at our stores. Give the gift of music and let them choose their favorite vinyl records, CDs, or other musical treasures.
-        </p>
+          <div id="giftcardtextdiv">
+
+            <p id="giftcardtext">
+              Looking for the perfect gift for your loved ones? We're thrilled to announce that you can now purchase gift cards at our stores. Give the gift of music and let them choose their favorite vinyl records, CDs, or other musical treasures. </p>
+              <div id="giftcardspan"> </div>
+              <div id="locationdiv">Locations: <p className='locations'>Stockholm, sveavägen 3</p> <p className='locations'> Stockholm, Vackra vägen 12</p> <p className='locations'> Göteborg, Varggränd 13</p></div>
+
+           </div>
+
         </div>
-      
+
       </div>
     </div>
   );

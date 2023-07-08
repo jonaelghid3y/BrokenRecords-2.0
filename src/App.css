@@ -323,8 +323,8 @@ button.buyBtn:active {
   background-size: cover;
   background-position: center;
 
-  width: 99%;
-  height: 90vh;
+  width: 100%;
+  min-height: 110vh;
   display: flex;
   flex-direction: column;
   align-items:center;
@@ -365,6 +365,7 @@ button.buyBtn:active {
  border-radius: 10px;
  width: 400px;
  height: 250px;
+ margin-top: 200px;
 
 
 }
@@ -379,25 +380,46 @@ button.buyBtn:active {
  align-items: center;
   text-align: center;
   width: 100%;
-  height: 90vh;
+  min-height: 110vh;
   scroll-behavior: smooth;
   transition: 5s;
 }
-#giftcardtext{
-  margin-top: 20vh;
-  font-weight: 600;
+#giftcardtextdiv{
+  margin-top: 15vh;
+  margin-bottom: 200px;
+  padding: 30px;
+  width: 60%;
+  
   background: rgba(0, 0, 0, 0.45);
-border-radius: 16px;
-box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-backdrop-filter: blur(5px);
--webkit-backdrop-filter: blur(5px);
-border: 1px solid rgba(0, 0, 0, 0.3);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+#giftcardtext{
+  
 
 
-  font-size: 25px;
-  width: 80%;
+
+
+  font-size: 20px;
+  
   color: white;
   
+}
+#giftcardspan{
+  margin: 0 auto;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  width: 30px;
+  height: 5px;
+  border-radius: 20px;
+  background-color:rgb(236, 194, 6);
 }
 
 /*FOOTER*/
@@ -429,6 +451,26 @@ border: 1px solid rgba(0, 0, 0, 0.3);
   width: 100%;
 
 } 
+#locationdiv{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 20px;
+  color: white;
+  font-size: 18px;
+  flex-shrink: 1;
+
+}
+.locations{
+  
+  transition: 0.5s;
+}
+.locations:hover{
+  color: rgb(236, 194, 6);
+  scale: 1.1;
+  
+}
 
 .socialContainer {
   display: flex;
@@ -923,8 +965,10 @@ justify-content: center;
 
   #loggabild{
     
-   width: 15px;
-   height: 15px;
+   width: 25px;
+   height: 25px;
+   margin-right: 20px;
+
    }
    .landing-container {
     height: 80vh;
@@ -1051,6 +1095,12 @@ justify-content: center;
   .buyBtn:focus:not(:active) {
     transform: scale(1);
   }
+#presentkortdiv{
+  
+}
+#presentkort{
+
+}
 
 
   #presentkortkort{
@@ -1066,20 +1116,31 @@ justify-content: center;
    height: 200px;
   }
   #giftcardtext{
-    margin-top: 10vh;
-    font-weight: 600;
-    background: rgba(0, 0, 0, 0.45);
-  border-radius: 16px;
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(5px);
-  -webkit-backdrop-filter: blur(5px);
-  border: 1px solid rgba(0, 0, 0, 0.3);
+    margin-top: 3vh;
+   
   
   
-    font-size: 18px;
-    width: 80%;
+    font-size: 16px;
+    width: 100%;
     color: white;
     
+  }
+  #giftcardtextdiv{
+    margin-top: 15vh;
+    margin-bottom: 200px;
+    padding: 20px;
+    width: 85%;
+    
+    
+    
+  }
+  #locationdiv{
+   
+    flex-direction: column;
+    gap: 10px;
+    color: white;
+    font-size: 15px;
+  
   }
 
   .FooterContent{

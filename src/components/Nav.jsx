@@ -84,6 +84,7 @@ const Nav = () => {
             <Stylednavbarlänk onClick={toggleMenu}>About</Stylednavbarlänk>
           </Link>
         </Stylednavbar>
+       
         <Styledloggadiv id="loggan">
           <StyledNamediv>
             <motion.h1
@@ -99,8 +100,8 @@ const Nav = () => {
             <Styledlogdiv1>
               <motion.img
               
-                //  initial={{ width: 90, height: 90, opacity: 0 }}
-                // animate={{ width: 40, height: 40, y: 0, opacity: 1, rotate: [0, 840, 0] }}
+                  initial={{ opacity: 0 }}
+               animate={{  opacity: 1, rotate: [0, 840, 0] }}
                 transition={{ duration: 2 }}
                 whileHover={{ rotate: 840, transition: { duration: 5, repeat: Infinity } }}
                 id="loggabild" src="https://cdn4.iconfinder.com/data/icons/music-209/32/Music_dj_turntable_vinyl_disc-256.png"></motion.img>
@@ -119,6 +120,10 @@ const Nav = () => {
             </motion.h1>        </StyledNamediv>
         </Styledloggadiv>
 
+        
+      
+      
+    
 
 
         <Styledcartbutton style={{ marginRight: "10px", color: "white" }}>
@@ -229,7 +234,8 @@ height: 110px;
 justify-content: space-between;
 @media (max-width: 992px) {
 
-  padding: 20px;
+  padding: 30px;
+
  
 
 
@@ -257,7 +263,7 @@ transition: 1s;
   @media (max-width: 992px) {
     display: ${({ isOpen }) => (isOpen ? 'block' : 'none')};
     position: absolute;
-    top: 80px;
+    top: 59px;
     right: 0;
     background-color: #333;
     padding: 20px;
@@ -301,6 +307,7 @@ const StyledNamediv = styled.div`
   margin-right: 5px;
   @media (max-width: 992px) {
     font-size: 11px;
+    display:none;
     
   }
 `;
@@ -340,6 +347,7 @@ color: rgb(14, 13, 13);
 @media (max-width: 992px) {
  height:15px;
  width:15px;
+ font-size: 12px;
 
 }
 `;
@@ -358,132 +366,11 @@ const StyledHamburgerIcon = styled.div`
       cursor: pointer;
       color: white;
       z-index: 999; 
-      margin-right: 1vw
+      margin-right: 2.5vw
     }
   }
 `;
 
-
-
-
-
-const StyledLogDiv = styled.div`
-  display: flex;
-  align-items: center;
-  cursor: pointer;
-  color: white;
-  text-decoration: none;
-`;
-
-const StyledCartIconDiv = styled.div`
-  display: flex;
-  align-items: center;
-  cursor: pointer;
-  position: relative;
-`;
-
-const StyledCartLength = styled.span`
-  background-color: #f1c606;
-  color: black;
-  padding: 2px 5px;
-  border-radius: 50%;
-  font-size: 12px;
-  position: absolute;
-  top: -5px;
-  right: -5px;
-`;
-
-const StyledCartHoverDiv = styled.div`
-  background-color: white;
-  width: 300px;
-  padding: 10px;
-  position: absolute;
-  top: 60px;
-  right: 0;
-  border-radius: 5px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  z-index: 10;
-`;
-
-const StyledCartItems = styled.div`
-  max-height: 200px;
-  overflow-y: auto;
-  padding-right: 10px;
-
-  &::-webkit-scrollbar {
-    width: 5px;
-  }
-
-  &::-webkit-scrollbar-track {
-    background: #f1f1f1;
-  }
-
-  &::-webkit-scrollbar-thumb {
-    background: #888;
-  }
-
-  &::-webkit-scrollbar-thumb:hover {
-    background: #555;
-  }
-`;
-
-const StyledCartItem = styled.div`
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 10px;
-`;
-
-const StyledCartItemInfo = styled.div`
-  flex: 1;
-`;
-
-const StyledCartItemName = styled.p`
-  margin: 0;
-`;
-
-const StyledCartItemPrice = styled.p`
-  margin: 0;
-  font-size: 12px;
-  color: gray;
-`;
-
-const StyledCartItemActions = styled.div`
-  display: flex;
-  align-items: center;
-`;
-
-const StyledCartTotal = styled.div`
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-top: 10px;
-`;
-
-const StyledCartTotalLabel = styled.p`
-  margin: 0;
-`;
-
-const StyledCartTotalPrice = styled.p`
-  margin: 0;
-  font-weight: bold;
-`;
-
-const StyledEmptyCartButton = styled.button`
-  width: 100%;
-  background-color: #f1c606;
-  color: black;
-  border: none;
-  padding: 8px;
-  border-radius: 5px;
-  font-weight: bold;
-  cursor: pointer;
-  transition: background-color 0.2s ease-in;
-
-  &:hover {
-    background-color: #ffd700;
-  }
-`;
 const StyledIcon = styled(RiUserSettingsLine)`
   /* Default styles */
   width: 25px;

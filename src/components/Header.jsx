@@ -25,6 +25,15 @@ display: flex;
 align-items: center;
 justify-content: center;
 background-color: black;
+@media (max-width: 992px) {
+
+ height: 60px;
+
+ 
+
+
+}
+
 `;
 
 

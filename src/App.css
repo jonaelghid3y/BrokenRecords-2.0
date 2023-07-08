@@ -429,6 +429,12 @@ button.buyBtn:active {
   background-color:rgb(236, 194, 6);
 }
 
+/*FOOTER*/
+.SocialLogos svg, .PaymentContainer svg{
+  width: 25px;
+  height: 25px;
+}
+
 #locationdiv{
   display: flex;
   align-items: center;
@@ -731,6 +737,7 @@ justify-content: center;
   display: flex;
   justify-content: flex-end;
 }
+
 .landing-page{
   height: 90vh;
   width: 100%;
@@ -802,6 +809,95 @@ justify-content: center;
   cursor: auto;
   color: grey;
 }
+/*FOOTER*/
+.FooterTop {
+  background: black;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items:flex-end;
+  flex-direction: row;
+  background-color: black;
+}
+
+.FooterContent {
+  padding: 3vw;
+  width: 100%;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+}
+
+
+.CustomerService, .PaymentContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.CustomerService, .PaymentContainer > * {
+  margin-top: 5px;
+  text-align: left;
+}
+
+.CustomerService:hover {
+  cursor: pointer;
+}
+.rightContainer{
+  display: flex;
+  flex-direction: row;
+  justify-content:center;
+  height: 130px;
+  width: 300px;
+}
+.PaymentContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  gap: 20px;
+  margin-bottom: 10px;
+  
+}
+
+.payHeadline {
+  justify-content: center;
+  height: 30px;
+}
+
+.SocialLogos {
+  display: flex;
+}
+
+.SocialLogos > * {
+  margin-top: 10px;
+  text-align: left;
+}
+
+.SocialLogos:hover {
+  cursor: pointer;
+}
+
+.SocialLogos > * {
+  margin-right: 10px;
+}
+
+.SocialLogos > svg:nth-of-type(1):hover {
+  fill: pink;
+}
+
+.SocialLogos > svg:nth-of-type(2):hover {
+  fill: #00acee;
+}
+
+.SocialLogos > svg:nth-of-type(3):hover {
+  fill: #3b5998;
+}
+
+.SocialLogos > svg:nth-of-type(4):hover {
+  fill: limegreen;
+}
+
+
+/*ABOUT*/
 #aboutdiv{
   width: 100%;
   min-height: 100vh;
@@ -958,24 +1054,24 @@ justify-content: center;
     color: white;
     background-color:rgb(249, 204, 2);
     margin: 0;
-    padding: 2.5px;
-    min-width: 150px;
-    border-radius: 20px;
+    padding: 3px;
+    min-width: 110px;
+    border-radius: 10px;
     transition: all 0.5s;
     -webkit-transition: all 0.5s;
   }
-button.buyBtn:focus,
-button.buyBtn:active {
+  button.buyBtn:focus,
+  button.buyBtn:active {
   background-color: rgb(249, 204, 2);
   box-shadow: none;
   transform: scale(0.98);
   transition: all 0.25s;
   -webkit-transition: all 0.25s;
-}
+  }
 
-.buyBtn:focus:not(:active) {
-  transform: scale(1);
-}
+  .buyBtn:focus:not(:active) {
+    transform: scale(1);
+  }
 #presentkortdiv{
   
 }
@@ -1023,6 +1119,66 @@ button.buyBtn:active {
     font-size: 15px;
   
   }
+
+  .FooterContent{
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+    }
+    .footerheadline, .logoContainer{
+    font-size: 15px;
+    width: 100%;
+    }
+  .phone-container{
+    display: flex;
+    flex-direction: column;
+    justify-content:left;
+  }
+  .CustomerService{
+    display: flex;
+    flex-direction: column;
+    font-size: 10px;
+    
+  }
+  .rightContainer{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding-top: 5px;
+    justify-content: space-around;
+  }
+  .payHeadline{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 15px;
+  }
+
+  .socialContainer {
+    height: 55px;
+    display: flex;
+    flex-direction: column;
+  }
+  .CustomerService h3,  .rightContainer h3 {
+    font-size: 12px;
+    flex-direction: row;
+    }
+    .SocialLogos {
+      width: 100%;
+      display: flex;
+      margin-top: 2px ;
+    }
+
+    .SocialLogos svg{
+      width: 20px;
+      height: 20px;
+    }
+    .PaymentContainer svg{
+      width: 16px;
+      height: 16px;
+    }
+
+
 #checkouth1{
   margin-top: 100px;
   margin-bottom: 50px;

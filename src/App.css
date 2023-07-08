@@ -84,8 +84,6 @@ a {
   background-size: cover;
 }
 
-
-
 .store-name-conatiner {
   display: flex;
   justify-content: center;
@@ -892,9 +890,11 @@ justify-content: center;
   text-align: center;
   display: flex;
   align-items: center;
-  justify-content: center;
+  
+  justify-content: flex-start;
+  flex-direction: column;
   height: 400px;
-  clip-path: polygon(100% 0%, 0% 5%, 0% 95%, 100% 100%);
+  clip-path: polygon(100% 0%, 0% 5%, 0% 95%, 110% 100%);
 }
 
 @media only screen and (max-width: 992px) {

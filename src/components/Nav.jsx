@@ -148,7 +148,7 @@ const Nav = () => {
                 ) : (
                   <>
                     <h1 style={{ color: "black", margin: "0 auto" }}>CART</h1>
-                    <table style={{ color: "black" }}>
+                    <table style={{ color: "black", borderCollapse:'collapse;' }}>
                       <thead></thead>
                       <tbody>
                         {cart.map((Product) => (
@@ -156,27 +156,31 @@ const Nav = () => {
                             <td>
                               <img src={Product.image} style={{ height: "50px" }} />
                             </td>
-                            <td>
+                            <td style={{padding: '5px'}}>
                               <h5>{Product.title}</h5>
                               <h6> {Product.description}</h6>
                             </td>
-                            <td>
+                            <td style={{padding: '5px'}}>
                               <h5>Stock:{Product.stock}</h5>
                               {Product.price} kr
                             </td>
-                            <td>
+                            <td style={{padding: '5px'}}>
+                              <div id="knappcontainer">
                               <motion.button
                                 whileTap={{ scale: 0.9 }}
                                 onClick={() => handlereduceProduct(Product._id)}
                               >
-                                <AiFillMinusCircle style={{ marginRight: "5px" }} />
+
+                                <AiFillMinusCircle  />
                               </motion.button>
+
                               {Product.quantity}
                               <motion.button
                                 whileTap={{ scale: 0.9 }}
                                 onClick={() => handleAddProduct(Product._id)}>
-                                <AiFillPlusCircle style={{ marginLeft: "5px" }} />
+                                <AiFillPlusCircle  />
                               </motion.button>
+                              </div>
                             </td>
                             <td>
                               <motion.button

@@ -32,7 +32,7 @@ const Checkout = () => {
     <h1 id="checkouth1">Checkout</h1>
     <div id="formcontainer">
       {showImage ? (
-        <img id="orderbild" src="../imgs/Order.png" alt="Thank you" />
+        <img id="orderbild" src="../imgs/order.png" alt="Thank you" />
       ) : (
         <>
           <Cart cart={cart} updatecart={updatecart} setupdateCart={setupdateCart} />
@@ -128,6 +128,14 @@ align-items: center;
 justify-content: center;
 flex-direction:  column;
 width: 100%;
+@media (max-width: 992px) {
+
+  
+  height: 500px;
+ 
+
+
+}
 
 
 `;

@@ -97,7 +97,8 @@ const Cart = ({ cart }) => {
         </Styledtable>
         <h3 id="cartPrice">Total price: {totalPrice} Kr</h3>
         <motion.div whileHover={{scale: 1.2}} whileTap={{ scale: 0.8 }}>
-        <Styleddeletebutton style={{marginBottom:"100px"}} onClick={emptyCart}>Empty Cart</Styleddeletebutton>
+        <Styleddeletebutton 
+         onClick={emptyCart}>Empty Cart</Styleddeletebutton>
         </motion.div>
   
       </div>
@@ -108,11 +109,13 @@ const Cart = ({ cart }) => {
 const Styledtd = styled.td`
   border-bottom: 1px solid rgb(249, 204, 2);;
   text-align: center;
+  height: 50px;
   padding: 8px;
   @media (max-width: 992px) {
 
     padding: 2px;
     font-size: 10px;
+    
    
   
   

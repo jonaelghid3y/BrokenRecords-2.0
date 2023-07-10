@@ -1135,8 +1135,9 @@ justify-content: center;
   }
 
   #filterbar{
-    height: 10vh;
+    height: 11vh;
     width: 100%;
+    border-radius: 15px ;
     display: flex;
     flex-direction: column;
     align-items: center;

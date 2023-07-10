@@ -40,7 +40,7 @@ const Cart = ({ cart }) => {
     return (
       <div className="cart__empty">
         
-        <h1 style={{borderBottom: "1px solid black", margin: "50px"}}>Your cart is empty!</h1>
+        <h1 style={{margin: "20px"}}>Your cart is empty!</h1>
         <Link to="/" className="backLink">
           &#8592; Back
         </Link>
@@ -107,7 +107,7 @@ const Cart = ({ cart }) => {
 }
 
 const Styledtd = styled.td`
-  border-bottom: 1px solid rgb(249, 204, 2);;
+  border-bottom: 1px solid white;
   text-align: center;
   height: 50px;
   padding: 8px;
@@ -124,7 +124,7 @@ const Styledtd = styled.td`
 `;
 
 const Styledth = styled.th`
-  border-bottom: 1px solid rgb(249, 204, 2);;
+  border-bottom: 1px solid white;
   text-align: center;
   padding: 8px;
   @media (max-width: 992px) {
@@ -141,7 +141,7 @@ const Styledth = styled.th`
 const Styledtable = styled.table`
   margin-top: 20px;
   border-collapse: collapse;
-  border-bottom: 1px solid rgb(249, 204, 2);;
+  border-bottom: 1px solid white;
 
   width: 100%;
   padding-top: 50px;

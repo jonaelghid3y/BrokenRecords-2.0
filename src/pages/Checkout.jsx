@@ -39,7 +39,7 @@ const Checkout = () => {
           <div className="checkout-form-container">
             <form id="checkoutform" onSubmit={handleSubmit}>
               <div className="form-section">
-                <h1 style={{ margin: "50px" }}>Shipping Information</h1>
+                <h1 style={{ marginTop: "50px", marginBottom: '50px' }}>Shipping Information</h1>
                 <label htmlFor="name">Full Name:</label>
                 <input
                   type="text"
@@ -115,10 +115,10 @@ const Checkout = () => {
       )}
     </div>
   </Styledcheckoutdiv>
-);
+)
 };
 
-const Styledcheckoutdiv = styled.button`
+const Styledcheckoutdiv = styled.div`
 background-image: url(https://images.unsplash.com/photo-1633012350330-a957eeb38487?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=385&q=80);
 background-repeat: no-repeat;
 background-size: cover;
@@ -131,7 +131,7 @@ width: 100%;
 @media (max-width: 992px) {
 
   
-  height: 500px;
+  
  
 
 

@@ -11,15 +11,15 @@ import { SiPaypal } from 'react-icons/si';
 
 const Footer = () => {
   return (
-    <div class="FooterTop">
-      <div class="FooterContent">
-        <div class="logoContainer">
+    <div className="FooterTop">
+      <div className="FooterContent">
+        <div className="logoContainer">
           <h1 className='footerheadline'>
             <TbTrademark size={20} color='white'/> BROKEN RECORDS
           </h1>
         </div>
         <div className='phone-container'>
-          <div class="CustomerService">
+          <div className="CustomerService">
             <div> 
               <h3>
                 Customer service
@@ -32,22 +32,22 @@ const Footer = () => {
           </div>
           <div className='rightContainer'>
             <div className='payHeadline'>
-              <h3 class="ExtraSpace">
+              <h3 className="ExtraSpace">
                 Pay with
               </h3>
-                <div class="PaymentContainer">
+                <div className="PaymentContainer">
                   <SiMastercard  />
                   <SiKlarna  />
                   <SiPaypal  />
                 </div>
             </div>
-            <div class = 'socialContainer'>
-                <div class='socialHeadline'>
-                  <h3 class="ExtraSpace">
+            <div className = 'socialContainer'>
+                <div className='socialHeadline'>
+                  <h3 className="ExtraSpace">
                     Find us at
                   </h3>
                 </div>
-              <div class="SocialLogos">
+              <div className="SocialLogos">
                 <AiOutlineInstagram />
                 <AiOutlineTwitter  />
                 <AiFillFacebook />

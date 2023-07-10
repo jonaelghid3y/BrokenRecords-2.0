@@ -138,10 +138,7 @@ const Nav = () => {
             {isCartOpen && (
               <div
                 id="carthoverdiv"
-                style={{
-                  opacity: isCartOpen ? 1 : 0,
-                  transition: "opacity 0.3s ease-in-out",
-                }}
+                
               >
                 {cart.length === 0 ? (
                   <h1 style={{ color: "black" }}>Your cart is empty.</h1>

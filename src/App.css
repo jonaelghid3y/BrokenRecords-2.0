@@ -614,7 +614,7 @@ input {
 
 #carthoverdiv {
   position: fixed;
-  top: 8vh;
+  top: 7vh;
   right: 1vw;
   width: 500px;
   background: #fff;
@@ -683,7 +683,9 @@ input {
 
 }
 .cart__container{
-  padding: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  text-align: center;
  
 }
 .cart__img{
@@ -696,8 +698,12 @@ input {
   vertical-align: middle;
   border-bottom: 1px solid lightgrey;
 }
-#carthoverdiv tr:hover {
-  background-color: lightgray;
+
+.cart__empty{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
 #checkoutcontainer{
   height: 200vh;
@@ -731,6 +737,7 @@ justify-content: center;
 
 }
 .form-section{
+  text-align: center;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -933,24 +940,33 @@ justify-content: center;
 
 }
 #aboutusH1{
-  color: white;
+ color: rgb(255, 255, 255);
+ opacity: 0.75;
+
+ font-weight: 700;
   margin-top: 40vh;
-  font-size: 50px;
-  margin-right: 20px;
+  font-size: 60px;
+  transition: 0.5s;
+ 
   
 }
+#aboutusH1:hover{
+  opacity: 1;
+  scale: 1.1;
+
+}
 .mouse {
-  margin-top: 40vh;
-  margin-right: 15vw;
-	width: 35px;
-	height: 60px;
+  margin-top: 41vh;
+  margin-left: 15px;
+	width: 30px;
+	height: 50px;
 	border: 3px solid rgb(249, 204, 2);;
 	border-radius: 60px;
 	position: relative;
 	&::before {
 		content: '';
-		width: 12px;
-		height: 12px;
+		width: 10px;
+		height: 10px;
 		position: absolute;
 		top: 10px;
 		left: 50%;
@@ -1041,7 +1057,7 @@ justify-content: center;
   background-size: cover;
   display: flex;
   align-items: flex-start;
-  justify-content: flex-end;
+  justify-content: center;
   text-align: center;
   margin-bottom: -50px;
 
@@ -1049,7 +1065,7 @@ justify-content: center;
 
 #parallax2{
   background-image: url(https://www.billboard.com/wp-content/uploads/media/the-beatles-shea-stadium-billboard-1548.jpg?w=942&h=623&crop=1);
-  min-height: 600px;
+  min-height: 400px;
 
   background-attachment: fixed;
   background-position: center;
@@ -1082,6 +1098,8 @@ justify-content: center;
 }
 #contactwrapper{
   margin-top: 50px;
+  padding-left: 15px;
+  padding-right: 15px;
   width: 100%;
   display: flex;
   align-items: center;
@@ -1368,7 +1386,7 @@ justify-content: center;
   justify-content: center;
     flex-direction: column;
     width: 90%;
-    min-height: 120vh;
+    min-height: 20vh;
     margin-bottom: 100px;
   
   }
@@ -1403,24 +1421,7 @@ justify-content: center;
     width: 350px;
    
   }
-  #formcontainer{
-    background: rgba(0, 0, 0, 0.45);
-    border-radius: 16px;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  
-    backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(5px);
-    color: white;
-  
-    display: flex;
-   align-items: center;
-  justify-content: center;
-    flex-direction: row;
-    width: 95%;
-    min-height: 40vh;
-    margin-bottom: 100px;
-  
-  }
+ 
   #orderbild{
     height: 100%;
     width: 100%;
@@ -1440,6 +1441,77 @@ justify-content: center;
   
     height: 1000px;
   
+  }
+  #aboutusH1{
+     font-size: 40px;
+   }
+   .mouse {
+    margin-top: 40.5vh;
+    
+    width: 25px;
+    height: 40px;
+    border: 3px solid rgb(249, 204, 2);;
+    border-radius: 60px;
+    position: relative;
+    &::before {
+      content: '';
+      width: 8px;
+      height: 8px;
+      position: absolute;
+      top: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: rgb(249, 204, 2);
+      border-radius: 50%;
+      opacity: 1;
+      animation: wheel 2s infinite;
+      -webkit-animation: wheel 2s infinite;
+    }
+  }
+  
+  
+  @keyframes wheel {
+    from {
+      opacity: 0;
+      top: 60px;
+    }
+    to {
+      opacity: 1;
+      top: 10px;
+    }
+  }
+  
+  @-webkit-keyframes wheel {
+    from {
+      opacity: 0;
+      top: 60px;
+    }
+    to {
+      opacity: 1;
+      top: 10px;
+    }
+  }
+  
+  .scroll {
+    width: 60px;
+    height: 60px;
+    border: 2px solid rgb(249, 204, 2);
+    border-radius: 50%;
+    position: relative;
+    animation: down 1.5s infinite;
+    -webkit-animation: down 1.5s infinite;
+    &::before {
+      content: '';
+      position: absolute;
+      top: 15px;
+      left: 18px;
+      width: 18px;
+      height: 18px;
+      border-left: 2px solid rgb(249, 204, 2);
+      border-bottom: 2px solid rgb(249, 204, 2);
+      transform: rotate(-45deg);
+    }
+
   }
   
   

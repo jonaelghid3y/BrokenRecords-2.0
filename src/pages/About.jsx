@@ -28,7 +28,7 @@ export default function About() {
   return (
     <div id="aboutdiv">
       <div id="parallax">
-        <h1 id="aboutusH1">About</h1>
+        <h1 id="aboutusH1">ABOUT</h1>
         <div className="mouse"></div>
       </div>
       <div id="parallaxtextdiv">
@@ -38,8 +38,8 @@ export default function About() {
           <br />
           Det har verkligen varit en otrolig resa för oss båda. Vi har lärt oss så mycket längs vägen och haft en riktigt rolig tid med detta samarbete. Vi hoppas verkligen att ni har gillat vad ni har sett hittills!
         </motion.p>
-        <motion.h4 initial='hidden'  animate={inView ? 'visible' : 'hidden'} variants={containerVariants} ref={containerRef}>DNX x Frontendjoni</motion.h4>
-        <motion.div id="contactwrapper" initial='hidden'  animate={inView ? 'visible' : 'hidden'} variants={containerVariants} ref={containerRef} >
+        <motion.h4 initial='hidden'  animate={inView ? 'visible' : 'hidden'} variants={containerVariants} >DNK x Frontendjoni</motion.h4>
+        <motion.div id="contactwrapper" initial='hidden'  animate={inView ? 'visible' : 'hidden'} variants={containerVariants}>
           <motion.div className='contactdiv'>
             <h5>DNK:</h5>
             <Link>

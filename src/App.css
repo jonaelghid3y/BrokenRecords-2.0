@@ -627,7 +627,7 @@ input {
   align-items: center;
   flex-direction: column;
   gap: 20px;
-  transition: 2s;
+  transition: 1.5s;
 }
 
 .DeleteButton:hover {
